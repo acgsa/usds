@@ -18,7 +18,7 @@ const ExternalLinkIcon = () => (
 
 export type LinkVariant = "default" | "inline";
 
-interface LinkProps {
+interface LinkProps extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "children"> {
   variant?: LinkVariant;
   href?: string;
   leadingIcon?: React.ReactNode;
@@ -36,6 +36,7 @@ export function Link({
   disabled = false,
   children,
   className = "",
+  ...rest
 }: LinkProps) {
   const content = (
     <>
@@ -56,7 +57,7 @@ export function Link({
   }
 
   return (
-    <a href={href} className={baseClass}>
+    <a href={href} className={baseClass} {...rest}>
       {content}
     </a>
   );
