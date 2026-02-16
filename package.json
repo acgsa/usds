@@ -2,9 +2,25 @@
   "name": "usds",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "main": "./dist/usds.cjs",
+  "module": "./dist/usds.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/usds.js",
+      "require": "./dist/usds.cjs"
+    },
+    "./styles": "./dist/usds.css"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:lib": "vite build",
     "start": "next start",
     "lint": "eslint"
   },
@@ -14,11 +30,18 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vite": "^6.0.0",
+    "vite-plugin-dts": "^4.3.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   }
 }
