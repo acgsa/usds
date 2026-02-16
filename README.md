@@ -1,4 +1,5 @@
-This is a Design System custom designed for federal applications across government.
+This is a US Design System custom designed for federal applications across government.
+View a showcase here: https://acgsa.github.io/usds/
 
 ## Getting Started
 
