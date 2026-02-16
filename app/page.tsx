@@ -654,7 +654,7 @@ export default function ShowcasePage() {
         title="Checkbox & Radio"
         description="Styled checkboxes and radio buttons using design token colors for checked/unchecked states."
       >
-        <div style={{ display: "flex", gap: "var(--space-3xl)" }}>
+        <div className="checkbox-radio-row">
           <div>
             <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Checkboxes</div>
             <div className="check-group">

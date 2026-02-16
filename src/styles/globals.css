@@ -1228,6 +1228,19 @@ code, pre {
    Checkbox & Radio (Selection)
    Container per item: border, bg, focus ring, disabled state.
    ============================================================ */
+.checkbox-radio-row {
+  display: flex;
+  gap: var(--space-3xl);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .checkbox-radio-row {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+}
+
 .check-group {
   display: flex;
   flex-direction: column;
@@ -1490,6 +1503,13 @@ code, pre {
 .chart-card:hover {
   box-shadow: var(--shadow-md);
 }
+[data-theme="dark"] .chart-card {
+  background: var(--steel-950);
+}
+[data-theme="dark"] .chart-kpi-card,
+[data-theme="dark"] .kpi-card-small {
+  background: var(--steel-950);
+}
 .chart-card-title {
   font-size: var(--font-size-body-md);
   font-weight: var(--font-weight-semibold);
@@ -1672,6 +1692,40 @@ code, pre {
   white-space: nowrap;
   line-height: 1;
   margin-top: var(--space-2xs);
+}
+
+/* Progress chart: stacked labels on mobile to prevent overlap */
+@media (max-width: 640px) {
+  .completion-tracker-labels {
+    flex-direction: column;
+    gap: 0;
+    border-top: var(--border-sm) solid var(--color-border);
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
+  }
+  .completion-tracker-label-cell {
+    width: 100% !important;
+    min-width: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-xs) 0;
+    border-bottom: var(--border-sm) solid var(--color-border);
+    text-align: left;
+  }
+  .completion-tracker-label-cell:last-child {
+    border-bottom: none;
+  }
+  .completion-tracker-pct {
+    flex-shrink: 0;
+    margin-right: var(--space-sm);
+  }
+  .completion-tracker-name {
+    text-align: right;
+    white-space: normal;
+    margin-top: 0;
+    word-break: break-word;
+  }
 }
 
 /* KPI hover card (charts) */
