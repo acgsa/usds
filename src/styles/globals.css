@@ -2573,8 +2573,9 @@ code, pre {
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
-  width: max-content;
-  min-width: min-content;
+  right: 0;
+  width: 100%;
+  min-width: 0;
   background: var(--color-bg);
   border: var(--border-sm) solid var(--color-border);
   border-radius: var(--radius-sm);
@@ -2611,6 +2612,13 @@ code, pre {
 .dropdown-item-destructive:hover {
   background: var(--red-100);
   color: var(--color-error);
+}
+[data-theme="dark"] .dropdown-item-destructive {
+  color: var(--red-400);
+}
+[data-theme="dark"] .dropdown-item-destructive:hover {
+  background: var(--red-900);
+  color: var(--red-400);
 }
 
 .dropdown-divider {
