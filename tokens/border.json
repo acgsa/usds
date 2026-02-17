@@ -1,9 +1,0 @@
-{
-  "$description": "US Design System — border width (px).",
-  "border": {
-    "none": 0,
-    "sm": 1,
-    "md": 2,
-    "lg": 4
-  }
-}
