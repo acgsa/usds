@@ -1,0 +1,20 @@
+{
+  "$description": "Figma collection: Responsive — breakpoints and viewport context. Use for layout rules and when switching scales by viewport.",
+  "breakpoint": {
+    "sm": 640,
+    "md": 768,
+    "lg": 1024,
+    "xl": 1280,
+    "showcase": 1024
+  },
+  "context": {
+    "desktop": {
+      "description": "Default type and spacing scale (used in base.json type/spacing) apply at lg and up.",
+      "minWidth": 1024
+    },
+    "mobile": {
+      "description": "Below lg; use for overrides if you define mobile-specific type or spacing.",
+      "maxWidth": 1023
+    }
+  }
+}
