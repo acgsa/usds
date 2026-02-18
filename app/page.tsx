@@ -296,7 +296,7 @@ export default function ShowcasePage() {
         <h1>US Design System</h1>
         <div className="showcase-header-right">
           <ThemeToggleButton />
-          <a href="#" className="header-figma" aria-label="Figma" title="Figma">
+          <a href="https://figma-gov.com/design/TpUFaDOqpGxZmKPVFHXBgS/US-Design-System?node-id=1-4&t=L6h7x0BovNBu9f2C-1" target="_blank" rel="noopener noreferrer" className="header-figma" aria-label="Figma" title="Figma">
             <svg width="20" height="20" viewBox="0 0 38 57" fill="none" aria-hidden="true">
               <path d="M19 28.5c0-5.27 4.27-9.54 9.54-9.54 5.27 0 9.54 4.27 9.54 9.54 0 5.27-4.27 9.54-9.54 9.54-5.27 0-9.54-4.27-9.54-9.54z" fill="currentColor" />
               <path d="M0 47.5c0-5.27 4.27-9.54 9.54-9.54H19V57H9.54C4.27 57 0 52.73 0 47.5z" fill="currentColor" />
@@ -1163,8 +1163,10 @@ export default function ShowcasePage() {
             title="Figma"
             footer={
               <Link
-                href="#"
+                href="https://figma-gov.com/design/TpUFaDOqpGxZmKPVFHXBgS/US-Design-System?node-id=1-4&t=L6h7x0BovNBu9f2C-1"
                 variant="default"
+                target="_blank"
+                rel="noopener noreferrer"
                 leadingIcon={
                   <svg width="18" height="18" viewBox="0 0 38 57" fill="none" aria-hidden style={{ flexShrink: 0 }}>
                     <path d="M19 28.5c0-5.27 4.27-9.54 9.54-9.54 5.27 0 9.54 4.27 9.54 9.54 0 5.27-4.27 9.54-9.54 9.54-5.27 0-9.54-4.27-9.54-9.54z" fill="currentColor" />
