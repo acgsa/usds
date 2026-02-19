@@ -293,7 +293,7 @@ export default function ShowcasePage() {
             )}
           </svg>
         </button>
-        <h1>US Design System</h1>
+        <h1>A US Design System</h1>
         <div className="showcase-header-right">
           <ThemeToggleButton />
           <a href="https://figma-gov.com/design/TpUFaDOqpGxZmKPVFHXBgS/US-Design-System?node-id=1-4&t=L6h7x0BovNBu9f2C-1" target="_blank" rel="noopener noreferrer" className="header-figma" aria-label="Figma" title="Figma">
@@ -1152,7 +1152,7 @@ export default function ShowcasePage() {
       <Section
         id="about"
         title="About"
-        description="The US Design System provides reusable components, tokens, and patterns for building consistent government-facing applications."
+        description="This Design System provides reusable components, tokens, and patterns for building consistent government-facing applications."
       >
         <p className="section-desc" style={{ marginBottom: "var(--space-lg)", maxWidth: 560 }}>
           Use the design files and code references below to align your products with the system. Figma libraries support design handoff; the GitHub repo includes this showcase and all component source.
@@ -1209,7 +1209,7 @@ export default function ShowcasePage() {
 
       {/* Footer */}
       <footer className="showcase-footer" style={{ textAlign: "center", padding: "var(--space-xl) 0", color: "var(--color-text-placeholder)", fontSize: "var(--font-size-body-xs)" }}>
-        {"US Design System 🇺🇸  |  Brought to you by "}
+        {"A US Design System 🇺🇸  |  Brought to you by "}
         <a href="https://www.gsa.gov" target="_blank" rel="noopener noreferrer" className="showcase-footer-link">General Services Administration</a>
       </footer>
       </main>
