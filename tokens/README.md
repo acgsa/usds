@@ -12,9 +12,9 @@ Tokens are split into **3 Figma collections**: Base, Responsive, and Alias. Impo
 |--------|----------|
 | **color** | Full palette: steel, neutral, blue, red, orange, gold, yellow, green, pink, turquoise, violet (50–950) + white, black |
 | **type** | fontFamily (primary, secondary), fontWeight (regular, semibold, bold) |
-| **spacing** | scale (4px scale 0–1600) |
+| **scale** | scale (4px scale 0–1600) |
 
-**In Figma:** Create a collection **“Base”** and add variables from `base.json` (color variables from `color.*`, number variables from `type.*`, `spacing.*`).
+**In Figma:** Create a collection **“Base”** and add variables from `base.json` (color variables from `color.*`, number variables from `type.*`, `scale.*`).
 
 ---
 
