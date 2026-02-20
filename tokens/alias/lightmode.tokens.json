@@ -1793,12 +1793,12 @@
           "$value": {
             "colorSpace": "srgb",
             "components": [
-              0.3803921639919281,
-              0.40784314274787903,
-              0.4588235318660736
+              0.2078431397676468,
+              0.22745098173618317,
+              0.250980406999588
             ],
             "alpha": 1,
-            "hex": "#616875"
+            "hex": "#353A40"
           },
           "$extensions": {
             "com.figma.variableId": "VariableID:15:2181",
@@ -1806,8 +1806,8 @@
               "ALL_SCOPES"
             ],
             "com.figma.aliasData": {
-              "targetVariableId": "VariableID:0157177b8f0faf20d27339bb8c17cf7328258a70/-1:-1",
-              "targetVariableName": "color/steel/700",
+              "targetVariableId": "VariableID:1:870/-1:-1",
+              "targetVariableName": "color/steel/800",
               "targetVariableSetId": "VariableCollectionId:46106d9a40e67bbe1a03983ca3a5d7fa55d54a95/-1:-1",
               "targetVariableSetName": "base"
             },

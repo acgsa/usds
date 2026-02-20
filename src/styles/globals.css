@@ -121,7 +121,7 @@
   /* Text */
   --color-text: #1C1F22;
   --color-text-secondary: #141618;
-  --color-text-body: #616875;
+  --color-text-body: #353A40;
   --color-text-body-hover: #000000;
   --color-text-placeholder: #8792A3;
   --color-text-link: #353A40;
@@ -287,7 +287,7 @@
 
   --color-text: #FAFAFC;
   --color-text-secondary: #F4F5F8;
-  --color-text-body: var(--color-text); /* default text for readable body copy in dark mode */
+  --color-text-body: #353A40; /* default text for readable body copy in dark mode */
   --color-text-body-hover: #FFFFFF;
   --color-text-placeholder: #A7B4C9;
   --color-text-link: #D3D9E4;
