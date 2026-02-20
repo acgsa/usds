@@ -15,8 +15,8 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "US Design System",
-  description: "US Design System — component library and design tokens",
+  title: "A US Design System",
+  description: "A US Design System — component library and design tokens",
 };
 
 export default function RootLayout({

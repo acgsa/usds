@@ -11,10 +11,10 @@ Tokens are split into **3 Figma collections**: Base, Responsive, and Alias. Impo
 | Section | Contents |
 |--------|----------|
 | **color** | Full palette: steel, neutral, blue, red, orange, gold, yellow, green, pink, turquoise, violet (50–950) + white, black |
-| **type** | fontFamily (primary, secondary), fontWeight (regular, semibold, bold), fontSize (body xs–lg, heading H1–H6), lineHeight, icon (xs–xl) |
-| **spacing** | space (3xs–3xl in px), scale (4px scale 0–1600) |
+| **type** | fontFamily (primary, secondary), fontWeight (regular, semibold, bold) |
+| **scale** | scale (4px scale 0–1600) |
 
-**In Figma:** Create a collection **“Base”** and add variables from `base.json` (color variables from `color.*`, number variables from `type.*`, `spacing.*`).
+**In Figma:** Create a collection **“Base”** and add variables from `base.json` (color variables from `color.*`, number variables from `type.*`, `scale.*`).
 
 ---
 
@@ -24,6 +24,8 @@ Tokens are split into **3 Figma collections**: Base, Responsive, and Alias. Impo
 
 | Section | Contents |
 |--------|----------|
+| **spacing** | 3xs, 2xs, xs, sm, md, lg, xl, 2xl, 3xl — tshirt sizing - values in px |
+| **icon sizing** | xs, sm, md, lg, xl — tshirt sizing - values in px |
 | **breakpoint** | sm (640), md (768), lg (1024), xl (1280), showcase (1024) — values in px |
 | **context** | desktop (minWidth 1024), mobile (maxWidth 1023) — describes where base type/spacing apply |
 

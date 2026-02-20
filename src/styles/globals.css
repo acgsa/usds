@@ -651,7 +651,8 @@ code, pre {
   color: var(--color-text-body-hover);
 }
 .sidebar-link:active {
-  background: var(--color-bg-muted);
+  background: var(--color-bg-hover);
+  color: var(--color-text-body-hover);
 }
 
 .header-figma,
