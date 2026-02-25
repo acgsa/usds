@@ -5,6 +5,7 @@ import React, { useState } from "react";
 interface TabItem {
   id: string;
   label: string;
+  icon?: React.ReactNode;
   content?: React.ReactNode;
 }
 
@@ -23,10 +24,11 @@ export function Tabs({ items, defaultTab }: TabsProps) {
         {items.map((item) => (
           <button
             key={item.id}
-            className={`tab ${active === item.id ? "tab-active" : ""}`}
+            className={`tab ${active === item.id ? "tab-active" : "tab-inactive"}`}
             onClick={() => setActive(item.id)}
             type="button"
           >
+            {item.icon && <span className="tab-icon">{item.icon}</span>}
             {item.label}
           </button>
         ))}

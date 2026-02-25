@@ -33,9 +33,8 @@ import {
 import {
   PlusIcon,
   DownloadIcon as DownloadIconNew,
-  DocumentDuplicateIcon,
+  CopyIcon,
   EyeIcon,
-  ArrowLineRightIcon,
 } from "@/components/ui/Icons";
 
 /* ───────────────────── helpers ───────────────────── */
@@ -150,11 +149,6 @@ const spacingTokens = [
 
 /* ───────────────────── table sample data (cell components: Link, Checkmark, Actions, Chip) ───────────────────── */
 
-const DownloadIcon = () => <DownloadIconNew size={16} aria-hidden />;
-const DuplicateIcon = () => <DocumentDuplicateIcon size={16} aria-hidden />;
-const ViewIcon = () => <EyeIcon size={16} aria-hidden />;
-const ExpandIcon = () => <ArrowLineRightIcon size={16} aria-hidden />;
-
 const tableColumns = [
   { key: "name", header: "Name" },
   {
@@ -186,9 +180,9 @@ const tableColumns = [
     header: "Actions",
     render: () => (
       <div className="table-cell-actions">
-        <IconButton variant="ghost" size="sm" icon={<DownloadIcon />} label="Download" type="button" />
-        <IconButton variant="ghost" size="sm" icon={<DuplicateIcon />} label="Duplicate" type="button" />
-        <IconButton variant="ghost" size="sm" icon={<ViewIcon />} label="View" type="button" />
+        <IconButton variant="ghost" size="sm" icon={<DownloadIconNew />} label="Download" type="button" />
+        <IconButton variant="ghost" size="sm" icon={<CopyIcon />} label="Copy" type="button" />
+        <IconButton variant="ghost" size="sm" icon={<EyeIcon />} label="Preview" type="button" />
       </div>
     ),
   },
@@ -200,9 +194,9 @@ const tableData = [
 ];
 
 const tableHeaderActions: TableHeaderAction[] = [
-  { icon: <DownloadIcon />, label: "Download" },
-  { icon: <DuplicateIcon />, label: "Duplicate" },
-  { icon: <ExpandIcon />, label: "Expand" },
+  { icon: <DownloadIconNew />, label: "Download" },
+  { icon: <CopyIcon />, label: "Copy" },
+  { icon: <EyeIcon />, label: "Preview" },
 ];
 
 /* ───────────────────── nav data ───────────────────── */

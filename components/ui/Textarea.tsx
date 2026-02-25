@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useId } from "react";
 
 interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
 }
 
 export function Textarea({ label, id, ...props }: TextareaProps) {
-  const inputId = id || `textarea-${Math.random().toString(36).slice(2, 8)}`;
+  const generatedId = useId();
+  const inputId = id || generatedId;
   return (
     <div className="input-wrapper">
       {label && (

@@ -2235,9 +2235,23 @@ code, pre {
   color: var(--color-text-body-hover);
 }
 
+.tab-inactive .tab-icon {
+  color: var(--color-icon);
+}
+
 .tab-active {
   color: var(--color-text);
   border-bottom-color: var(--color-text);
+}
+
+.tab-active .tab-icon {
+  color: var(--color-text);
+}
+
+.tab-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5rem;
 }
 
 /* ============================================================

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 
 export type InputSize = "sm" | "md" | "lg";
 
@@ -18,7 +18,8 @@ export function Input({
   id,
   ...props
 }: InputProps) {
-  const inputId = id || `input-${Math.random().toString(36).slice(2, 8)}`;
+  const generatedId = useId();
+  const inputId = id || generatedId;
   return (
     <div className="input-wrapper">
       {label && (
