@@ -26,6 +26,7 @@ import {
   Dropdown,
   Divider,
   Menu,
+  DrawerButton,
   DonutChart,
   BarChart,
   SmallKpiCard,
@@ -249,6 +250,7 @@ export default function ShowcasePage() {
   const [modalOpen, setModalOpen] = useState(false);
   const [toggleStates, setToggleStates] = useState({ sm: false, md: true, lg: false });
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [drawerState, setDrawerState] = useState<"open" | "closed">("open");
 
   const closeSidebar = () => setSidebarOpen(false);
 
@@ -1120,6 +1122,21 @@ export default function ShowcasePage() {
                 { type: "subtext", label: "Menu item", subtext: "Subtext copy", disabled: true },
               ]}
             />
+          </div>
+        </div>
+
+        <div className="row-label" style={{ marginBottom: "var(--space-xs)", marginTop: "var(--space-lg)" }}>Drawer Button</div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-sm)", alignItems: "start" }}>
+          <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Interactive Drawer Toggle</div>
+          <div style={{ display: "flex", gap: "var(--space-sm)", alignItems: "center" }}>
+            <DrawerButton
+              state={drawerState}
+              direction="right"
+              onClick={() => setDrawerState(drawerState === "open" ? "closed" : "open")}
+            />
+            <span className="text-sm text-gray-600">
+              State: {drawerState === "open" ? "Open" : "Closed"} | Click to toggle
+            </span>
           </div>
         </div>
       </Section>

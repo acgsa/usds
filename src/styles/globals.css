@@ -2291,6 +2291,99 @@ code, pre {
 }
 
 /* ============================================================
+   DrawerButton
+   ============================================================ */
+.drawer-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  font-family: var(--font-primary);
+  position: relative;
+}
+
+.drawer-button-default,
+.drawer-button-hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.drawer-button-default {
+  opacity: 1;
+  transition: opacity var(--transition-fast);
+}
+
+.drawer-button-hover {
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.drawer-button:hover:not(:disabled) .drawer-button-default {
+  opacity: 0;
+}
+
+.drawer-button:hover:not(:disabled) .drawer-button-hover {
+  opacity: 1;
+}
+
+.drawer-button:hover:not(:disabled) {
+  background: var(--color-bg-hover);
+  border-color: var(--color-border-strong);
+}
+
+.drawer-button:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.drawer-button:active:not(:disabled) {
+  background: var(--color-bg-emphasis);
+  border-color: var(--color-border-strong);
+}
+
+.drawer-button:disabled {
+  background: var(--color-bg-disabled);
+  color: var(--color-text-disabled);
+  border-color: var(--color-border-disabled);
+  cursor: not-allowed;
+}
+
+[data-theme="dark"] .drawer-button {
+  background: var(--color-bg);
+  color: var(--color-text);
+  border-color: var(--color-border-emphasis);
+}
+
+[data-theme="dark"] .drawer-button:hover:not(:disabled) {
+  background: var(--color-bg-hover);
+  border-color: var(--color-border-strong);
+}
+
+[data-theme="dark"] .drawer-button:active:not(:disabled) {
+  background: var(--color-bg-emphasis);
+  border-color: var(--color-border-strong);
+}
+
+[data-theme="dark"] .drawer-button:disabled {
+  background: var(--color-bg-disabled);
+  color: var(--color-text-disabled);
+  border-color: var(--color-border-disabled);
+}
+
+/* Showcase-specific drawer button styling */
+.showcase-layout .drawer-button {
+  border: 1px solid var(--color-border);
+}
+
+/* ============================================================
    Tabs
    ============================================================ */
 .tabs {

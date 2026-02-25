@@ -255,6 +255,114 @@ export const XMarkIcon: React.FC<IconProps> = ({
 );
 
 /**
+ * Drawer Closed Icon
+ * Displays parallel lines representing a closed drawer/navigation panel
+ */
+export const DrawerClosedIcon: React.FC<IconProps> = ({
+  size = 24,
+  className = '',
+  ...props
+}) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    {...props}
+  >
+    <path
+      d="M9.18018 3.27196V20.9481M5.25 3H18.75C19.9926 3 21 4.09894 21 5.45455V18.5455C21 19.9011 19.9926 21 18.75 21H5.25C4.00736 21 3 19.9011 3 18.5455V5.45455C3 4.09894 4.00736 3 5.25 3Z"
+      stroke="currentColor"
+      strokeWidth="1.5"
+    />
+  </svg>
+);
+
+/**
+ * Drawer Open Icon
+ * Displays a panel open representation for drawer/navigation panel
+ */
+export const DrawerOpenIcon: React.FC<IconProps> = ({
+  size = 24,
+  className = '',
+  ...props
+}) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    {...props}
+  >
+    <path
+      d="M8.18018 5.45501V18.5459M5.25 3H18.75C19.9926 3 21 4.09894 21 5.45455V18.5455C21 19.9011 19.9926 21 18.75 21H5.25C4.00736 21 3 19.9011 3 18.5455V5.45455C3 4.09894 4.00736 3 5.25 3Z"
+      stroke="currentColor"
+      strokeWidth="1.5"
+    />
+  </svg>
+);
+
+/**
+ * Arrow Line Right Icon
+ * Displays a right-pointing arrow with line for navigation
+ */
+export const ArrowLineRightIcon: React.FC<IconProps> = ({
+  size = 24,
+  className = '',
+  ...props
+}) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    {...props}
+  >
+    <path
+      d="M11.75 18L18 12M18 12L11.75 6M18 12L3 12M21 3V21"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+/**
+ * Arrow Line Left Icon
+ * Displays a left-pointing arrow with line for navigation
+ */
+export const ArrowLineLeftIcon: React.FC<IconProps> = ({
+  size = 24,
+  className = '',
+  ...props
+}) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    {...props}
+  >
+    <path
+      d="M12.25 18L6 12M6 12L12.25 6M6 12L21 12M3 3V21"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+/**
  * Icon component map for easy access by name
  * Usage: <Icon name="download" />
  */
@@ -268,6 +376,10 @@ export const iconMap = {
   chevronDown: ChevronDownIcon,
   chevronUp: ChevronUpIcon,
   xMark: XMarkIcon,
+  drawerClosed: DrawerClosedIcon,
+  drawerOpen: DrawerOpenIcon,
+  arrowLineRight: ArrowLineRightIcon,
+  arrowLineLeft: ArrowLineLeftIcon,
 } as const;
 
 export type IconName = keyof typeof iconMap;

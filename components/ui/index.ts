@@ -24,4 +24,5 @@ export { Dropdown } from "./Dropdown";
 export { Divider } from "./Divider";
 export { Navbar } from "./Navbar";
 export { Menu } from "./Menu";
+export { DrawerButton } from "./DrawerButton";
 export { DonutChart, BarChart, SmallKpiCard, CompletionTracker } from "./Charts";

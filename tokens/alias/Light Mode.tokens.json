@@ -990,6 +990,34 @@
             }
           }
         },
+        "tooltip": {
+          "tooltip": {
+            "$type": "color",
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [
+                0.10980392247438431,
+                0.12156862765550613,
+                0.13333334028720856
+              ],
+              "alpha": 1,
+              "hex": "#1C1F22"
+            },
+            "$extensions": {
+              "com.figma.variableId": "VariableID:118:4132",
+              "com.figma.scopes": [
+                "ALL_SCOPES"
+              ],
+              "com.figma.aliasData": {
+                "targetVariableId": "VariableID:5da8e6c10d6809ab918cd060023e1732b02a7173/-1:-1",
+                "targetVariableName": "color/steel/900",
+                "targetVariableSetId": "VariableCollectionId:44a48c43c3839d091f770596d85bcea52ec3af57/-1:-1",
+                "targetVariableSetName": "base"
+              },
+              "com.figma.isOverride": true
+            }
+          }
+        },
         "alerts": {
           "default": {
             "$type": "color",
@@ -1299,34 +1327,6 @@
               "com.figma.aliasData": {
                 "targetVariableId": "VariableID:35f60af973696735d5fe29ad0f4f427256d44d8f/-1:-1",
                 "targetVariableName": "color/violet/200",
-                "targetVariableSetId": "VariableCollectionId:44a48c43c3839d091f770596d85bcea52ec3af57/-1:-1",
-                "targetVariableSetName": "base"
-              },
-              "com.figma.isOverride": true
-            }
-          }
-        },
-        "tooltip": {
-          "tooltip": {
-            "$type": "color",
-            "$value": {
-              "colorSpace": "srgb",
-              "components": [
-                0.10980392247438431,
-                0.12156862765550613,
-                0.13333334028720856
-              ],
-              "alpha": 1,
-              "hex": "#1C1F22"
-            },
-            "$extensions": {
-              "com.figma.variableId": "VariableID:118:4132",
-              "com.figma.scopes": [
-                "ALL_SCOPES"
-              ],
-              "com.figma.aliasData": {
-                "targetVariableId": "VariableID:5da8e6c10d6809ab918cd060023e1732b02a7173/-1:-1",
-                "targetVariableName": "color/steel/900",
                 "targetVariableSetId": "VariableCollectionId:44a48c43c3839d091f770596d85bcea52ec3af57/-1:-1",
                 "targetVariableSetName": "base"
               },
