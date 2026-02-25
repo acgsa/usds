@@ -2415,8 +2415,12 @@ code, pre {
   color: var(--color-text-body);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: var(--color-bg-muted);
+  background: var(--steel-50);
   border-bottom: var(--border-sm) solid var(--color-border);
+}
+
+[data-theme="dark"] .table th {
+  background: var(--steel-950);
 }
 
 .table td {
@@ -2701,7 +2705,7 @@ code, pre {
   align-items: center;
   gap: var(--space-xs);
   padding: var(--space-xs) var(--space-md);
-  font-size: var(--font-size-body-sm);
+  font-size: var(--font-size-body-xs);
   color: var(--color-text-body);
   cursor: pointer;
   transition: background var(--transition-fast), color var(--transition-fast);

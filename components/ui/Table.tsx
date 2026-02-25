@@ -26,7 +26,7 @@ export function TableHeader({ title, actionButtons = [], dropdown }: TableHeader
             {buttons.map((btn, i) => (
               <ActionButton
                 key={i}
-                size="md"
+                size="sm"
                 icon={btn.icon}
                 onClick={btn.onClick}
                 aria-label={btn.label}

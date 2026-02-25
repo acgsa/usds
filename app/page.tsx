@@ -181,9 +181,9 @@ const tableColumns = [
     header: "Actions",
     render: () => (
       <div className="table-cell-actions">
-        <IconButton variant="ghost" size="sm" icon={<DownloadIconNew />} label="Download" type="button" />
-        <IconButton variant="ghost" size="sm" icon={<CopyIcon />} label="Copy" type="button" />
-        <IconButton variant="ghost" size="sm" icon={<EyeIcon />} label="Preview" type="button" />
+        <ActionButton size="sm" icon={<DownloadIconNew size={16} />} aria-label="Download" />
+        <ActionButton size="sm" icon={<CopyIcon size={16} />} aria-label="Copy" />
+        <ActionButton size="sm" icon={<EyeIcon size={16} />} aria-label="Preview" />
       </div>
     ),
   },
@@ -195,9 +195,9 @@ const tableData = [
 ];
 
 const tableHeaderActions: TableHeaderAction[] = [
-  { icon: <DownloadIconNew />, label: "Download" },
-  { icon: <CopyIcon />, label: "Copy" },
-  { icon: <EyeIcon />, label: "Preview" },
+  { icon: <DownloadIconNew size={16} />, label: "Download" },
+  { icon: <CopyIcon size={16} />, label: "Copy" },
+  { icon: <EyeIcon size={16} />, label: "Preview" },
 ];
 
 /* ───────────────────── nav data ───────────────────── */
@@ -903,7 +903,7 @@ export default function ShowcasePage() {
               dropdown={
                 <Dropdown
                   label="Dropdown"
-                  size="md"
+                  size="sm"
                   items={[
                     { label: "Sort by name" },
                     { label: "Sort by date" },
