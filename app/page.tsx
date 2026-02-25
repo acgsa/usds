@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "@/components/ThemeProvider";
 import {
   Button, PillButton, IconButton, ButtonGroup, FilterGroup, Link,
+  ActionButton,
   Input,
   Textarea,
   Checkbox,
@@ -209,6 +210,7 @@ const navSections = [
   ]},
   { group: "Actions", items: [
     { id: "buttons", label: "Buttons" },
+    { id: "action-button", label: "Action Button" },
   ]},
   { group: "Inputs", items: [
     { id: "text-inputs", label: "Text Inputs" },
@@ -599,6 +601,49 @@ export default function ShowcasePage() {
             <Link variant="inline">Link</Link>
             <div className="row-label" style={{ marginBottom: "var(--space-xs)", fontSize: "var(--font-size-body-xs)", marginTop: "var(--space-sm)" }}>Disabled</div>
             <Link variant="inline" disabled>Link</Link>
+          </div>
+        </div>
+      </Section>
+
+      {/* ─── 4.5. Action Button ─── */}
+      <Section
+        id="action-button"
+        title="Action Button"
+        description="Icon-only buttons with hover and pressed states. Use for quick actions like download, copy, and preview."
+      >
+        <div className="row-label" style={{ marginBottom: "var(--space-sm)" }}>Sizes</div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "var(--space-xl)", maxWidth: 560 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-md)" }}>
+            <div className="row-label" style={{ marginBottom: "var(--space-xs)", fontSize: "var(--font-size-body-xs)" }}>Small</div>
+            <div style={{ display: "flex", gap: "var(--space-md)" }}>
+              <ActionButton size="sm" icon={<DownloadIconNew size={16} />} />
+              <ActionButton size="sm" icon={<CopyIcon size={16} />} />
+              <ActionButton size="sm" icon={<EyeIcon size={16} />} />
+            </div>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-md)" }}>
+            <div className="row-label" style={{ marginBottom: "var(--space-xs)", fontSize: "var(--font-size-body-xs)" }}>Medium</div>
+            <div style={{ display: "flex", gap: "var(--space-md)" }}>
+              <ActionButton size="md" icon={<DownloadIconNew size={20} />} />
+              <ActionButton size="md" icon={<CopyIcon size={20} />} />
+              <ActionButton size="md" icon={<EyeIcon size={20} />} />
+            </div>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-md)" }}>
+            <div className="row-label" style={{ marginBottom: "var(--space-xs)", fontSize: "var(--font-size-body-xs)" }}>Large</div>
+            <div style={{ display: "flex", gap: "var(--space-md)" }}>
+              <ActionButton size="lg" icon={<DownloadIconNew size={24} />} />
+              <ActionButton size="lg" icon={<CopyIcon size={24} />} />
+              <ActionButton size="lg" icon={<EyeIcon size={24} />} />
+            </div>
+          </div>
+        </div>
+        <div style={{ marginTop: "var(--space-lg)" }}>
+          <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Disabled</div>
+          <div style={{ display: "flex", gap: "var(--space-md)" }}>
+            <ActionButton size="md" icon={<DownloadIconNew size={20} />} disabled />
+            <ActionButton size="md" icon={<CopyIcon size={20} />} disabled />
+            <ActionButton size="md" icon={<EyeIcon size={20} />} disabled />
           </div>
         </div>
       </Section>

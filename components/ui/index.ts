@@ -1,4 +1,5 @@
 export { Button, PillButton, IconButton, PlusIcon } from "./Button";
+export { ActionButton } from "./ActionButton";
 export { Link } from "./Link";
 export { ButtonGroup } from "./ButtonGroup";
 export { FilterGroup } from "./FilterGroup";

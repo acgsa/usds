@@ -1,4 +1,5 @@
 import React from "react";
+import { ActionButton } from "./ActionButton";
 
 export interface TableHeaderAction {
   icon: React.ReactNode;
@@ -23,15 +24,13 @@ export function TableHeader({ title, actionButtons = [], dropdown }: TableHeader
         {buttons.length > 0 && (
           <div className="table-header-buttons">
             {buttons.map((btn, i) => (
-              <button
+              <ActionButton
                 key={i}
-                type="button"
-                className="table-header-icon-btn"
+                size="md"
+                icon={btn.icon}
                 onClick={btn.onClick}
                 aria-label={btn.label}
-              >
-                {btn.icon}
-              </button>
+              />
             ))}
           </div>
         )}
