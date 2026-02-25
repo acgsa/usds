@@ -210,7 +210,6 @@ const navSections = [
   ]},
   { group: "Actions", items: [
     { id: "buttons", label: "Buttons" },
-    { id: "action-button", label: "Action Button" },
   ]},
   { group: "Inputs", items: [
     { id: "text-inputs", label: "Text Inputs" },
@@ -514,27 +513,6 @@ export default function ShowcasePage() {
           <PillButton variant="primary" size="lg">Large</PillButton>
         </div>
 
-        {/* — Icon Buttons — */}
-        <div className="row-label" style={{ marginBottom: "var(--space-sm)", marginTop: "var(--space-xl)" }}>Icon Buttons — Square</div>
-        <div className="component-row" style={{ alignItems: "center" }}>
-          <IconButton variant="primary" size="xs" icon={<PlusIcon />} label="Add" />
-          <IconButton variant="primary" size="sm" icon={<PlusIcon />} label="Add" />
-          <IconButton variant="primary" size="md" icon={<PlusIcon />} label="Add" />
-          <IconButton variant="primary" size="lg" icon={<PlusIcon />} label="Add" />
-          <IconButton variant="secondary" size="md" icon={<PlusIcon />} label="Add" />
-          <IconButton variant="outline" size="md" icon={<PlusIcon />} label="Add" />
-        </div>
-
-        <div className="row-label" style={{ marginBottom: "var(--space-sm)", marginTop: "var(--space-lg)" }}>Icon Buttons — Circle</div>
-        <div className="component-row" style={{ alignItems: "center" }}>
-          <IconButton variant="primary" shape="circle" size="xs" icon={<PlusIcon />} label="Add" />
-          <IconButton variant="primary" shape="circle" size="sm" icon={<PlusIcon />} label="Add" />
-          <IconButton variant="primary" shape="circle" size="md" icon={<PlusIcon />} label="Add" />
-          <IconButton variant="primary" shape="circle" size="lg" icon={<PlusIcon />} label="Add" />
-          <IconButton variant="secondary" shape="circle" size="md" icon={<PlusIcon />} label="Add" />
-          <IconButton variant="outline" shape="circle" size="md" icon={<PlusIcon />} label="Add" />
-        </div>
-
         {/* — Button Groups — */}
         <div className="row-label" style={{ marginBottom: "var(--space-sm)", marginTop: "var(--space-xl)" }}>Button Group</div>
         <div style={{ display: "flex", gap: "var(--space-xl)", alignItems: "start", flexWrap: "wrap" }}>
@@ -603,15 +581,30 @@ export default function ShowcasePage() {
             <Link variant="inline" disabled>Link</Link>
           </div>
         </div>
-      </Section>
 
-      {/* ─── 4.5. Action Button ─── */}
-      <Section
-        id="action-button"
-        title="Action Button"
-        description="Icon-only buttons with hover and pressed states. Use for quick actions like download, copy, and preview."
-      >
-        <div className="row-label" style={{ marginBottom: "var(--space-sm)" }}>Sizes</div>
+        {/* — Icon Buttons — */}
+        <div className="row-label" style={{ marginBottom: "var(--space-sm)", marginTop: "var(--space-xl)" }}>Icon Buttons — Square</div>
+        <div className="component-row" style={{ alignItems: "center" }}>
+          <IconButton variant="primary" size="xs" icon={<PlusIcon />} label="Add" />
+          <IconButton variant="primary" size="sm" icon={<PlusIcon />} label="Add" />
+          <IconButton variant="primary" size="md" icon={<PlusIcon />} label="Add" />
+          <IconButton variant="primary" size="lg" icon={<PlusIcon />} label="Add" />
+          <IconButton variant="secondary" size="md" icon={<PlusIcon />} label="Add" />
+          <IconButton variant="outline" size="md" icon={<PlusIcon />} label="Add" />
+        </div>
+
+        <div className="row-label" style={{ marginBottom: "var(--space-sm)", marginTop: "var(--space-lg)" }}>Icon Buttons — Circle</div>
+        <div className="component-row" style={{ alignItems: "center" }}>
+          <IconButton variant="primary" shape="circle" size="xs" icon={<PlusIcon />} label="Add" />
+          <IconButton variant="primary" shape="circle" size="sm" icon={<PlusIcon />} label="Add" />
+          <IconButton variant="primary" shape="circle" size="md" icon={<PlusIcon />} label="Add" />
+          <IconButton variant="primary" shape="circle" size="lg" icon={<PlusIcon />} label="Add" />
+          <IconButton variant="secondary" shape="circle" size="md" icon={<PlusIcon />} label="Add" />
+          <IconButton variant="outline" shape="circle" size="md" icon={<PlusIcon />} label="Add" />
+        </div>
+
+        {/* — Action Button — */}
+        <div className="row-label" style={{ marginBottom: "var(--space-sm)", marginTop: "var(--space-xl)" }}>Action Button</div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "var(--space-xl)", maxWidth: 560 }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-md)" }}>
             <div className="row-label" style={{ marginBottom: "var(--space-xs)", fontSize: "var(--font-size-body-xs)" }}>Small</div>
