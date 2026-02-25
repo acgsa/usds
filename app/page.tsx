@@ -735,10 +735,10 @@ export default function ShowcasePage() {
 
         <div className="row-label" style={{ marginBottom: "var(--space-xs)", marginTop: "var(--space-md)" }}>With status dot</div>
         <div className="component-row">
-          <Badge color="green" dot>Active</Badge>
-          <Badge color="gold" dot>Pending</Badge>
-          <Badge color="red" dot>Error</Badge>
-          <Badge color="steel" dot>Draft</Badge>
+          <Badge color="green" dot="active">Active</Badge>
+          <Badge color="gold" dot="pending">Pending</Badge>
+          <Badge color="red" dot="error">Error</Badge>
+          <Badge color="steel" dot="draft">Draft</Badge>
         </div>
       </Section>
 
@@ -1135,10 +1135,13 @@ export default function ShowcasePage() {
       <Section
         id="about"
         title="About"
-        description="This Design System provides reusable components, tokens, and patterns for building consistent government-facing applications."
+        description="This Design System provides reusable components, tokens, and patterns for building consistent government-facing applications. All components pass WCAG 2.0 AA accessibility requirements."
       >
         <p className="section-desc" style={{ marginBottom: "var(--space-lg)", maxWidth: 560 }}>
-          Use the design files and code references below to align your products with the system. Figma libraries support design handoff; the GitHub repo includes this showcase and all component source.
+          Components are actively maintained and may be updated at any time to reflect ongoing improvements and feedback. The provided source code is fully customizable, allowing you to adapt and extend it to meet the specific needs of your project.
+        </p>
+        <p className="section-desc" style={{ marginBottom: "var(--space-lg)", maxWidth: 560 }}>
+          Use the design files and code references below to align your products with the system. Figma libraries support seamless design handoff, while the GitHub repository includes this showcase and all component source code.
         </p>
         <div className="about-cards">
           <Card

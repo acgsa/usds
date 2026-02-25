@@ -6,11 +6,13 @@ export type BadgeColor =
 
 export type BadgeSize = "sm" | "md" | "lg";
 
+export type BadgeDotStatus = "active" | "error" | "pending" | "draft";
+
 interface BadgeProps {
   children: React.ReactNode;
   color?: BadgeColor;
   size?: BadgeSize;
-  dot?: boolean;
+  dot?: boolean | BadgeDotStatus;
   icon?: boolean;
   dismissible?: boolean;
   onDismiss?: () => void;
@@ -25,9 +27,23 @@ export function Badge({
   dismissible = false,
   onDismiss,
 }: BadgeProps) {
+  const getDotClassName = () => {
+    if (typeof dot === "string") {
+      return `badge-dot badge-dot-${dot}`;
+    }
+    return "badge-dot";
+  };
+
+  const getDotStyle = () => {
+    if (typeof dot === "string") {
+      return undefined; // Let CSS class handle the color
+    }
+    return { background: "currentColor" };
+  };
+
   return (
     <span className={`badge badge-${color} badge-${size}`}>
-      {dot && <span className="badge-dot" style={{ background: "currentColor" }} />}
+      {dot && <span className={getDotClassName()} style={getDotStyle()} />}
       {icon && (
         <svg width="12" height="12" viewBox="0 0 18 18" aria-hidden="true" style={{ flexShrink: 0 }}>
           <circle cx="9" cy="9" r="7.5" fill="none" stroke="currentColor" strokeWidth="1.25" />

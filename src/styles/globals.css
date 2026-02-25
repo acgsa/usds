@@ -1866,6 +1866,23 @@ code, pre {
   border-radius: 50%;
   flex-shrink: 0;
 }
+
+.badge-dot-active {
+  background: var(--green-500);
+}
+
+.badge-dot-error {
+  background: var(--red-500);
+}
+
+.badge-dot-pending {
+  background: currentColor;
+}
+
+.badge-dot-draft {
+  background: currentColor;
+}
+
 .badge-dismiss {
   background: none;
   border: none;
