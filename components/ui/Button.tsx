@@ -98,13 +98,27 @@ export function IconButton({
   ...props
 }: IconButtonProps) {
   const shapeClass = shape === "circle" ? "btn-icon-circle" : "";
+
+  // Map button sizes to icon sizes
+  const iconSizeMap = {
+    xs: 12,
+    sm: 16,
+    md: 20,
+    lg: 24,
+  };
+
+  const iconSize = iconSizeMap[size as keyof typeof iconSizeMap];
+
+  // Clone the icon with the appropriate size prop
+  const iconWithSize = React.cloneElement(icon as React.ReactElement<{ size?: number }>, { size: iconSize });
+
   return (
     <button
       className={`btn btn-icon ${shapeClass} btn-${variant} btn-${size} ${className}`}
       aria-label={label}
       {...props}
     >
-      {icon}
+      {iconWithSize}
     </button>
   );
 }

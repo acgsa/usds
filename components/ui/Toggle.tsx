@@ -21,7 +21,7 @@ export function Toggle({
 }: ToggleProps) {
   const sizeClass = size === "md" ? "" : `toggle-${size}`;
   return (
-    <label className={`toggle ${sizeClass}`} style={{ opacity: disabled ? 0.5 : 1 }}>
+    <label className={`toggle ${sizeClass}`}>
       <input
         type="checkbox"
         checked={checked}

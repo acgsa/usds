@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "@/components/ThemeProvider";
 import {
-  Button, PillButton, IconButton, PlusIcon, ButtonGroup, FilterGroup, Link,
+  Button, PillButton, IconButton, ButtonGroup, FilterGroup, Link,
   Input,
   Textarea,
   Checkbox,
@@ -30,6 +30,13 @@ import {
   SmallKpiCard,
   CompletionTracker,
 } from "@/components/ui";
+import {
+  PlusIcon,
+  DownloadIcon as DownloadIconNew,
+  DocumentDuplicateIcon,
+  EyeIcon,
+  ArrowLineRightIcon,
+} from "@/components/ui/Icons";
 
 /* ───────────────────── helpers ───────────────────── */
 
@@ -143,28 +150,10 @@ const spacingTokens = [
 
 /* ───────────────────── table sample data (cell components: Link, Checkmark, Actions, Chip) ───────────────────── */
 
-const DownloadIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
-  </svg>
-);
-const DuplicateIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
-    <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
-  </svg>
-);
-const ViewIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-    <circle cx="12" cy="12" r="3" />
-  </svg>
-);
-const ExpandIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-  </svg>
-);
+const DownloadIcon = () => <DownloadIconNew size={16} aria-hidden />;
+const DuplicateIcon = () => <DocumentDuplicateIcon size={16} aria-hidden />;
+const ViewIcon = () => <EyeIcon size={16} aria-hidden />;
+const ExpandIcon = () => <ArrowLineRightIcon size={16} aria-hidden />;
 
 const tableColumns = [
   { key: "name", header: "Name" },
@@ -532,20 +521,20 @@ export default function ShowcasePage() {
         {/* — Icon Buttons — */}
         <div className="row-label" style={{ marginBottom: "var(--space-sm)", marginTop: "var(--space-xl)" }}>Icon Buttons — Square</div>
         <div className="component-row" style={{ alignItems: "center" }}>
-          <IconButton variant="primary" size="xs" icon={<PlusIcon size={12} />} label="Add" />
+          <IconButton variant="primary" size="xs" icon={<PlusIcon />} label="Add" />
           <IconButton variant="primary" size="sm" icon={<PlusIcon />} label="Add" />
           <IconButton variant="primary" size="md" icon={<PlusIcon />} label="Add" />
-          <IconButton variant="primary" size="lg" icon={<PlusIcon size={18} />} label="Add" />
+          <IconButton variant="primary" size="lg" icon={<PlusIcon />} label="Add" />
           <IconButton variant="secondary" size="md" icon={<PlusIcon />} label="Add" />
           <IconButton variant="outline" size="md" icon={<PlusIcon />} label="Add" />
         </div>
 
         <div className="row-label" style={{ marginBottom: "var(--space-sm)", marginTop: "var(--space-lg)" }}>Icon Buttons — Circle</div>
         <div className="component-row" style={{ alignItems: "center" }}>
-          <IconButton variant="primary" shape="circle" size="xs" icon={<PlusIcon size={12} />} label="Add" />
+          <IconButton variant="primary" shape="circle" size="xs" icon={<PlusIcon />} label="Add" />
           <IconButton variant="primary" shape="circle" size="sm" icon={<PlusIcon />} label="Add" />
           <IconButton variant="primary" shape="circle" size="md" icon={<PlusIcon />} label="Add" />
-          <IconButton variant="primary" shape="circle" size="lg" icon={<PlusIcon size={18} />} label="Add" />
+          <IconButton variant="primary" shape="circle" size="lg" icon={<PlusIcon />} label="Add" />
           <IconButton variant="secondary" shape="circle" size="md" icon={<PlusIcon />} label="Add" />
           <IconButton variant="outline" shape="circle" size="md" icon={<PlusIcon />} label="Add" />
         </div>
