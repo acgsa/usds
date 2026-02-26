@@ -45,7 +45,7 @@ export function Badge({
     <span className={`badge badge-${color} badge-${size}`}>
       {dot && <span className={getDotClassName()} style={getDotStyle()} />}
       {icon && (
-        <svg width="12" height="12" viewBox="0 0 18 18" aria-hidden="true" style={{ flexShrink: 0 }}>
+        <svg width="12" height="12" viewBox="0 0 18 18" aria-hidden="true" style={{ flexShrink: 0, color: "var(--icon-color)" }}>
           <circle cx="9" cy="9" r="7.5" fill="none" stroke="currentColor" strokeWidth="1.25" />
           <ellipse cx="9" cy="9" rx="3.5" ry="7.5" fill="none" stroke="currentColor" strokeWidth="1.25" />
           <line x1="1.5" y1="9" x2="16.5" y2="9" stroke="currentColor" strokeWidth="1.25" />
@@ -59,7 +59,7 @@ export function Badge({
           aria-label="Remove"
           type="button"
         >
-          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" style={{ color: "var(--icon-color)" }}>
             <line x1="3" y1="3" x2="9" y2="9" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
             <line x1="9" y1="3" x2="3" y2="9" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
           </svg>

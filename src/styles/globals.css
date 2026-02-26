@@ -170,24 +170,34 @@
   /* Chip / Badge Colors (Light: 200 bg, dark text per chart) */
   --color-chip-steel-bg: var(--steel-200);
   --color-chip-steel-text: var(--steel-800);
+  --color-chip-steel-icon: var(--steel-800);
   --color-chip-blue-bg: var(--blue-200);
   --color-chip-blue-text: var(--blue-800);
+  --color-chip-blue-icon: var(--blue-800);
   --color-chip-red-bg: var(--red-200);
   --color-chip-red-text: var(--red-800);
+  --color-chip-red-icon: var(--red-800);
   --color-chip-orange-bg: var(--orange-200);
   --color-chip-orange-text: var(--orange-800);
+  --color-chip-orange-icon: var(--orange-800);
   --color-chip-gold-bg: var(--gold-200);
-  --color-chip-gold-text: var(--gold-800);
+  --color-chip-gold-text: var(--gold-900);
+  --color-chip-gold-icon: var(--gold-900);
   --color-chip-yellow-bg: var(--yellow-200);
   --color-chip-yellow-text: var(--yellow-900);
+  --color-chip-yellow-icon: var(--yellow-900);
   --color-chip-green-bg: var(--green-200);
   --color-chip-green-text: var(--green-800);
+  --color-chip-green-icon: var(--green-800);
   --color-chip-pink-bg: var(--pink-200);
   --color-chip-pink-text: var(--pink-800);
+  --color-chip-pink-icon: var(--pink-800);
   --color-chip-turquoise-bg: var(--turquoise-200);
   --color-chip-turquoise-text: var(--turquoise-900);
+  --color-chip-turquoise-icon: var(--turquoise-900);
   --color-chip-violet-bg: var(--violet-200);
   --color-chip-violet-text: var(--violet-800);
+  --color-chip-violet-icon: var(--violet-800);
 
   /* Chart / Data viz colors (light) */
   --chart-1: var(--blue-300);
@@ -332,24 +342,34 @@
   /* Chip / Badge Colors (Dark: 700/800/900 bg, text at 100) */
   --color-chip-steel-bg: var(--steel-800);
   --color-chip-steel-text: var(--steel-100);
+  --color-chip-steel-icon: var(--steel-100);
   --color-chip-blue-bg: var(--blue-700);
   --color-chip-blue-text: var(--blue-100);
+  --color-chip-blue-icon: var(--blue-100);
   --color-chip-red-bg: var(--red-700);
   --color-chip-red-text: var(--red-100);
+  --color-chip-red-icon: var(--red-100);
   --color-chip-orange-bg: var(--orange-700);
   --color-chip-orange-text: var(--orange-100);
+  --color-chip-orange-icon: var(--orange-100);
   --color-chip-gold-bg: var(--gold-700);
   --color-chip-gold-text: var(--gold-100);
+  --color-chip-gold-icon: var(--gold-50);
   --color-chip-yellow-bg: var(--yellow-900);
   --color-chip-yellow-text: var(--yellow-100);
+  --color-chip-yellow-icon: var(--yellow-50);
   --color-chip-green-bg: var(--green-800);
   --color-chip-green-text: var(--green-100);
+  --color-chip-green-icon: var(--green-100);
   --color-chip-pink-bg: var(--pink-800);
   --color-chip-pink-text: var(--pink-100);
+  --color-chip-pink-icon: var(--pink-100);
   --color-chip-turquoise-bg: var(--turquoise-900);
   --color-chip-turquoise-text: var(--turquoise-100);
+  --color-chip-turquoise-icon: var(--turquoise-100);
   --color-chip-violet-bg: var(--violet-800);
   --color-chip-violet-text: var(--violet-100);
+  --color-chip-violet-icon: var(--violet-100);
 
   /* Chart / Data viz colors (dark) */
   --chart-1: var(--blue-400);
@@ -920,18 +940,33 @@ code, pre {
 
 /* Destructive */
 .btn-destructive {
-  background: var(--color-error);
-  border-color: var(--color-error);
-  color: var(--color-white);
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-error);
 }
 .btn-destructive:hover:not(:disabled) {
-  background: var(--red-700);
-  border-color: var(--red-700);
+  background: var(--red-50);
+  border-color: transparent;
+}
+.btn-destructive:active:not(:disabled) {
+  background: var(--red-100);
+  border-color: transparent;
+}
+.btn-destructive:focus-visible:not(:disabled) {
+  border-color: var(--color-focus-ring);
 }
 .btn-destructive:disabled {
   background: var(--color-bg-emphasis);
-  border-color: var(--color-bg-emphasis);
+  border-color: transparent;
   color: var(--color-text-disabled);
+}
+
+/* Destructive - Dark Mode */
+[data-theme="dark"] .btn-destructive:hover:not(:disabled) {
+  background: var(--red-800);
+}
+[data-theme="dark"] .btn-destructive:active:not(:disabled) {
+  background: var(--red-700);
 }
 
 /* Button Group */
@@ -1848,16 +1883,16 @@ code, pre {
 .badge-md { font-size: var(--font-size-body-xs); padding: var(--space-3xs) var(--space-sm); }
 .badge-lg { font-size: var(--font-size-body-sm); padding: var(--space-xs) var(--space-md); }
 
-.badge-steel  { background: var(--color-chip-steel-bg); color: var(--color-chip-steel-text); }
-.badge-blue   { background: var(--color-chip-blue-bg); color: var(--color-chip-blue-text); }
-.badge-red    { background: var(--color-chip-red-bg); color: var(--color-chip-red-text); }
-.badge-orange { background: var(--color-chip-orange-bg); color: var(--color-chip-orange-text); }
-.badge-gold   { background: var(--color-chip-gold-bg); color: var(--color-chip-gold-text); }
-.badge-yellow { background: var(--color-chip-yellow-bg); color: var(--color-chip-yellow-text); }
-.badge-green  { background: var(--color-chip-green-bg); color: var(--color-chip-green-text); }
-.badge-pink   { background: var(--color-chip-pink-bg); color: var(--color-chip-pink-text); }
-.badge-turquoise { background: var(--color-chip-turquoise-bg); color: var(--color-chip-turquoise-text); }
-.badge-violet { background: var(--color-chip-violet-bg); color: var(--color-chip-violet-text); }
+.badge-steel  { background: var(--color-chip-steel-bg); color: var(--color-chip-steel-text); --icon-color: var(--color-chip-steel-icon); }
+.badge-blue   { background: var(--color-chip-blue-bg); color: var(--color-chip-blue-text); --icon-color: var(--color-chip-blue-icon); }
+.badge-red    { background: var(--color-chip-red-bg); color: var(--color-chip-red-text); --icon-color: var(--color-chip-red-icon); }
+.badge-orange { background: var(--color-chip-orange-bg); color: var(--color-chip-orange-text); --icon-color: var(--color-chip-orange-icon); }
+.badge-gold   { background: var(--color-chip-gold-bg); color: var(--color-chip-gold-text); --icon-color: var(--color-chip-gold-icon); }
+.badge-yellow { background: var(--color-chip-yellow-bg); color: var(--color-chip-yellow-text); --icon-color: var(--color-chip-yellow-icon); }
+.badge-green  { background: var(--color-chip-green-bg); color: var(--color-chip-green-text); --icon-color: var(--color-chip-green-icon); }
+.badge-pink   { background: var(--color-chip-pink-bg); color: var(--color-chip-pink-text); --icon-color: var(--color-chip-pink-icon); }
+.badge-turquoise { background: var(--color-chip-turquoise-bg); color: var(--color-chip-turquoise-text); --icon-color: var(--color-chip-turquoise-icon); }
+.badge-violet { background: var(--color-chip-violet-bg); color: var(--color-chip-violet-text); --icon-color: var(--color-chip-violet-icon); }
 
 /* Status dots */
 .badge-dot {
@@ -1876,7 +1911,7 @@ code, pre {
 }
 
 .badge-dot-pending {
-  background: currentColor;
+  background: var(--gold-500);
 }
 
 .badge-dot-draft {
@@ -2201,7 +2236,7 @@ code, pre {
   color: var(--color-text-body-hover);
 }
 .menu .menu-item:hover:not(:disabled) .menu-item-label {
-  font-weight: var(--font-weight-semibold);
+  /* font weight remains regular on hover */
 }
 .menu-item:hover:not(:disabled) .menu-item-sub {
   color: var(--color-text-body);
@@ -2231,7 +2266,7 @@ code, pre {
   z-index: 1;
 }
 .menu .menu-item:focus-visible .menu-item-label {
-  font-weight: var(--font-weight-semibold);
+  /* font weight remains regular on focus */
 }
 .menu-item:focus-visible .menu-item-sub {
   color: var(--color-text-body);
