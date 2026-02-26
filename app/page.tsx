@@ -251,6 +251,7 @@ export default function ShowcasePage() {
   const [toggleStates, setToggleStates] = useState({ sm: false, md: true, lg: false });
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [drawerState, setDrawerState] = useState<"open" | "closed">("open");
+  const [activeSection, setActiveSection] = useState<string>("typography");
 
   const closeSidebar = () => setSidebarOpen(false);
 
@@ -259,6 +260,23 @@ export default function ShowcasePage() {
     else document.body.style.overflow = "";
     return () => { document.body.style.overflow = ""; };
   }, [sidebarOpen]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navSections.flatMap(group => group.items);
+      for (const item of sections) {
+        const element = document.getElementById(item.id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 200) {
+            setActiveSection(item.id);
+          }
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className={`showcase-layout${sidebarOpen ? " sidebar-open" : ""}`}>
@@ -309,8 +327,13 @@ export default function ShowcasePage() {
             <div key={group.group} className="sidebar-group">
               <div className="sidebar-group-label">{group.group}</div>
               {group.items.map((item) => (
-                <a key={item.id} href={`#${item.id}`} className="sidebar-link" onClick={closeSidebar}>
-                  {item.label}
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  className={`sidebar-link${activeSection === item.id ? " menu-item-active" : ""}`}
+                  onClick={closeSidebar}
+                >
+                  <span className="menu-item-label">{item.label}</span>
                 </a>
               ))}
             </div>

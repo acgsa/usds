@@ -657,14 +657,20 @@ code, pre {
 }
 
 .sidebar-link {
-  display: block;
+  display: flex;
+  align-items: center;
   font-size: var(--font-size-body-sm);
   font-weight: var(--font-weight-regular);
   color: var(--color-text-body);
+  background: var(--color-bg);
   text-decoration: none;
-  padding: 6px var(--space-sm);
+  padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  box-sizing: border-box;
+  border: none;
+  cursor: pointer;
+  text-align: left;
 }
 .sidebar-link:hover {
   background: var(--color-bg-hover);
@@ -673,6 +679,24 @@ code, pre {
 .sidebar-link:active {
   background: var(--color-bg-hover);
   color: var(--color-text-body-hover);
+  font-weight: var(--font-weight-semibold);
+}
+.sidebar-link:focus-visible {
+  background: var(--color-bg-hover);
+  color: var(--color-text-body-hover);
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: -2px;
+  z-index: 1;
+}
+.sidebar-link .menu-item-label {
+  flex: 1;
+  font-weight: var(--font-weight-regular);
+}
+.sidebar-link.menu-item-active .menu-item-label {
+  font-weight: var(--font-weight-semibold);
+}
+.sidebar-link:hover:not(.menu-item-active) .menu-item-label {
+  font-weight: var(--font-weight-regular);
 }
 
 .header-figma,
