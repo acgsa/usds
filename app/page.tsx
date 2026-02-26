@@ -254,37 +254,15 @@ export default function ShowcasePage() {
   const [activeSection, setActiveSection] = useState<string>("typography");
 
   const closeSidebar = () => setSidebarOpen(false);
+  const handleNavClick = (id: string) => {
+    setActiveSection(id);
+  };
 
   useEffect(() => {
     if (sidebarOpen) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "";
     return () => { document.body.style.overflow = ""; };
   }, [sidebarOpen]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = navSections.flatMap(group => group.items);
-      let currentSection = null;
-
-      // Find the section that is currently in view (top of section is above viewport top)
-      for (const item of sections) {
-        const element = document.getElementById(item.id);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          // If section top is above or near the top of viewport
-          if (rect.top <= 150) {
-            currentSection = item.id;
-          }
-        }
-      }
-
-      if (currentSection && currentSection !== activeSection) {
-        setActiveSection(currentSection);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [activeSection]);
 
   return (
     <div className={`showcase-layout${sidebarOpen ? " sidebar-open" : ""}`}>
@@ -339,7 +317,10 @@ export default function ShowcasePage() {
                   key={item.id}
                   href={`#${item.id}`}
                   className={`sidebar-link${activeSection === item.id ? " menu-item-active" : ""}`}
-                  onClick={closeSidebar}
+                  onClick={(e) => {
+                    handleNavClick(item.id);
+                    closeSidebar();
+                  }}
                 >
                   <span className="menu-item-label">{item.label}</span>
                 </a>
