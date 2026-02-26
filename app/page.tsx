@@ -264,19 +264,27 @@ export default function ShowcasePage() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = navSections.flatMap(group => group.items);
+      let currentSection = null;
+
+      // Find the section that is currently in view (top of section is above viewport top)
       for (const item of sections) {
         const element = document.getElementById(item.id);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 200) {
-            setActiveSection(item.id);
+          // If section top is above or near the top of viewport
+          if (rect.top <= 150) {
+            currentSection = item.id;
           }
         }
+      }
+
+      if (currentSection && currentSection !== activeSection) {
+        setActiveSection(currentSection);
       }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [activeSection]);
 
   return (
     <div className={`showcase-layout${sidebarOpen ? " sidebar-open" : ""}`}>
