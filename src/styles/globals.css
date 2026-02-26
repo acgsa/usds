@@ -2236,7 +2236,7 @@ code, pre {
   color: var(--color-text-body-hover);
 }
 .menu .menu-item:hover:not(:disabled) .menu-item-label {
-  /* font weight remains regular on hover */
+  font-weight: var(--font-weight-regular);
 }
 .menu-item:hover:not(:disabled) .menu-item-sub {
   color: var(--color-text-body);
@@ -2266,7 +2266,7 @@ code, pre {
   z-index: 1;
 }
 .menu .menu-item:focus-visible .menu-item-label {
-  /* font weight remains regular on focus */
+  font-weight: var(--font-weight-regular);
 }
 .menu-item:focus-visible .menu-item-sub {
   color: var(--color-text-body);
@@ -2291,10 +2291,14 @@ code, pre {
 .menu-item-icon .menu-item-label {
   font-weight: var(--font-weight-regular);
 }
-.menu .menu-item-icon:hover:not(:disabled) .menu-item-label,
-.menu .menu-item-icon.menu-item-active .menu-item-label,
-.menu .menu-item-icon:focus-visible .menu-item-label {
+.menu .menu-item-icon:hover:not(:disabled) .menu-item-label {
+  font-weight: var(--font-weight-regular);
+}
+.menu .menu-item-icon.menu-item-active .menu-item-label {
   font-weight: var(--font-weight-semibold);
+}
+.menu .menu-item-icon:focus-visible .menu-item-label {
+  font-weight: var(--font-weight-regular);
 }
 
 /* Style 2: Subtext variant */
@@ -2311,10 +2315,14 @@ code, pre {
 .menu-item-text .menu-item-label {
   font-weight: var(--font-weight-regular);
 }
-.menu .menu-item-subtext:hover:not(:disabled) .menu-item-label,
-.menu .menu-item-subtext.menu-item-active .menu-item-label,
-.menu .menu-item-subtext:focus-visible .menu-item-label {
+.menu .menu-item-subtext:hover:not(:disabled) .menu-item-label {
+  font-weight: var(--font-weight-regular);
+}
+.menu .menu-item-subtext.menu-item-active .menu-item-label {
   font-weight: var(--font-weight-semibold);
+}
+.menu .menu-item-subtext:focus-visible .menu-item-label {
+  font-weight: var(--font-weight-regular);
 }
 .menu-item-sub {
   font-size: var(--font-size-body-xs);
