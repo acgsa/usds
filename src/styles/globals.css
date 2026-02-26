@@ -2231,14 +2231,14 @@ code, pre {
 /* Default: regular weight (already set above) */
 
 /* Hover */
-.menu-item:hover:not(:disabled) {
+.menu-item:hover:not(:disabled):not(.menu-item-active) {
   background: var(--color-bg-hover);
   color: var(--color-text-body-hover);
 }
-.menu .menu-item:hover:not(:disabled) .menu-item-label {
+.menu .menu-item:hover:not(:disabled):not(.menu-item-active) .menu-item-label {
   font-weight: var(--font-weight-regular);
 }
-.menu-item:hover:not(:disabled) .menu-item-sub {
+.menu-item:hover:not(:disabled):not(.menu-item-active) .menu-item-sub {
   color: var(--color-text-body);
 }
 
@@ -2257,19 +2257,26 @@ code, pre {
   color: var(--color-text-body);
 }
 
-/* Focus: same as hover + blue outline */
-.menu-item:focus-visible {
+/* Focus: same as hover + blue outline (but not on active items) */
+.menu-item:focus-visible:not(.menu-item-active) {
   background: var(--color-bg-hover);
   color: var(--color-text-body-hover);
   outline: 2px solid var(--color-border-focus);
   outline-offset: -2px;
   z-index: 1;
 }
-.menu .menu-item:focus-visible .menu-item-label {
+.menu .menu-item:focus-visible:not(.menu-item-active) .menu-item-label {
   font-weight: var(--font-weight-regular);
 }
-.menu-item:focus-visible .menu-item-sub {
+.menu-item:focus-visible:not(.menu-item-active) .menu-item-sub {
   color: var(--color-text-body);
+}
+
+/* Focus on active item: keep active styling + outline */
+.menu-item:focus-visible.menu-item-active {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: -2px;
+  z-index: 1;
 }
 
 /* Disabled */
