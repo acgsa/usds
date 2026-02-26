@@ -2298,13 +2298,13 @@ code, pre {
 .menu-item-icon .menu-item-label {
   font-weight: var(--font-weight-regular);
 }
-.menu .menu-item-icon:hover:not(:disabled) .menu-item-label {
+.menu .menu-item-icon:hover:not(:disabled):not(.menu-item-active) .menu-item-label {
   font-weight: var(--font-weight-regular);
 }
 .menu .menu-item-icon.menu-item-active .menu-item-label {
   font-weight: var(--font-weight-semibold);
 }
-.menu .menu-item-icon:focus-visible .menu-item-label {
+.menu .menu-item-icon:focus-visible:not(.menu-item-active) .menu-item-label {
   font-weight: var(--font-weight-regular);
 }
 
@@ -2322,13 +2322,13 @@ code, pre {
 .menu-item-text .menu-item-label {
   font-weight: var(--font-weight-regular);
 }
-.menu .menu-item-subtext:hover:not(:disabled) .menu-item-label {
+.menu .menu-item-subtext:hover:not(:disabled):not(.menu-item-active) .menu-item-label {
   font-weight: var(--font-weight-regular);
 }
 .menu .menu-item-subtext.menu-item-active .menu-item-label {
   font-weight: var(--font-weight-semibold);
 }
-.menu .menu-item-subtext:focus-visible .menu-item-label {
+.menu .menu-item-subtext:focus-visible:not(.menu-item-active) .menu-item-label {
   font-weight: var(--font-weight-regular);
 }
 .menu-item-sub {
