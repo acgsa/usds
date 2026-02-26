@@ -1021,16 +1021,15 @@ export default function ShowcasePage() {
         <Modal
           open={modalOpen}
           onClose={() => setModalOpen(false)}
-          title="Confirm Action"
+          title="Overwrite System Prompt?"
+          description="Saving will replace the previously saved system prompt. This cannot be undone. Do you wish to continue?"
           footer={
-            <>
-              <Button variant="ghost" size="sm" onClick={() => setModalOpen(false)}>Cancel</Button>
-              <Button variant="secondary" size="sm" onClick={() => setModalOpen(false)}>Confirm</Button>
-            </>
+            <ButtonGroup direction="vertical" fullWidth>
+              <Button variant="secondary" size="lg" onClick={() => setModalOpen(false)}>Overwrite</Button>
+              <Button variant="primary" size="lg" onClick={() => setModalOpen(false)}>Cancel</Button>
+            </ButtonGroup>
           }
-        >
-          Are you sure you want to proceed? This action will apply changes to your account settings and cannot be undone immediately.
-        </Modal>
+        />
       </Section>
 
       {/* ─── 17. Progress ─── */}
