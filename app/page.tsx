@@ -1142,7 +1142,7 @@ export default function ShowcasePage() {
       <Section
         id="menu"
         title="Menu"
-        description="Vertical menu for left-hand navigation or dropdown panels. Two item styles: icon with chevron-down, and title with subtext and chevron-right."
+        description="Vertical menu for left-hand navigation or dropdown panels. Two item styles: icon with chevron-down, and title with subtext and chevron-right. Available in medium and small sizes."
       >
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-xl)", maxWidth: 720 }}>
           <div>
@@ -1164,6 +1164,33 @@ export default function ShowcasePage() {
               items={[
                 { type: "subtext", label: "Menu item", subtext: "Subtext copy" },
                 { type: "subtext", label: "Menu item", subtext: "Subtext copy" },
+                { type: "subtext", label: "Menu item", subtext: "Subtext copy" },
+                { type: "subtext", label: "Menu item", subtext: "Subtext copy" },
+                { type: "subtext", label: "Menu item", subtext: "Subtext copy" },
+                { type: "subtext", label: "Menu item", subtext: "Subtext copy", disabled: true },
+              ]}
+            />
+          </div>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-xl)", maxWidth: 720, marginTop: "var(--space-xl)" }}>
+          <div>
+            <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Small Size — Icon Style</div>
+            <Menu
+              size="sm"
+              items={[
+                { type: "icon", label: "Menu item" },
+                { type: "icon", label: "Menu item" },
+                { type: "icon", label: "Menu item" },
+                { type: "icon", label: "Menu item", disabled: true },
+              ]}
+            />
+          </div>
+          <div>
+            <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Small Size — Subtext Style</div>
+            <Menu
+              size="sm"
+              items={[
                 { type: "subtext", label: "Menu item", subtext: "Subtext copy" },
                 { type: "subtext", label: "Menu item", subtext: "Subtext copy" },
                 { type: "subtext", label: "Menu item", subtext: "Subtext copy" },

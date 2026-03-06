@@ -46,15 +46,17 @@ type MenuItem = MenuItemIcon | MenuItemSubtext;
 
 interface MenuProps {
   items: MenuItem[];
+  size?: "md" | "sm";
 }
 
 /* ─── Component ─── */
 
-export function Menu({ items }: MenuProps) {
+export function Menu({ items, size = "md" }: MenuProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const sizeClass = size === "sm" ? "menu-sm" : "";
 
   return (
-    <nav className="menu">
+    <nav className={`menu ${sizeClass}`.trim()}>
       {items.map((item, i) => {
         const isActive = activeIndex === i;
 
@@ -63,7 +65,7 @@ export function Menu({ items }: MenuProps) {
             <button
               key={i}
               type="button"
-              className={`menu-item menu-item-icon ${isActive ? "menu-item-active" : ""}`}
+              className={`menu-item menu-item-icon ${isActive ? "menu-item-active" : ""}`.trim()}
               disabled={item.disabled}
               onClick={() => {
                 setActiveIndex(isActive ? null : i);
@@ -81,7 +83,7 @@ export function Menu({ items }: MenuProps) {
           <button
             key={i}
             type="button"
-            className={`menu-item menu-item-subtext ${isActive ? "menu-item-active" : ""}`}
+            className={`menu-item menu-item-subtext ${isActive ? "menu-item-active" : ""}`.trim()}
             disabled={item.disabled}
             onClick={() => {
               setActiveIndex(isActive ? null : i);

@@ -2307,6 +2307,12 @@ code, pre {
   transition: background var(--transition-fast), color var(--transition-fast);
   box-sizing: border-box;
 }
+
+/* Small size menu items */
+.menu-sm .menu-item {
+  padding: var(--space-3xs) var(--space-xs);
+  font-size: var(--font-size-body-xs);
+}
 /* Separator below each item; none below last item or below disabled item */
 .menu-item:last-child {
 }
@@ -2370,6 +2376,15 @@ code, pre {
 }
 .menu-item:disabled .menu-item-sub {
   color: var(--color-text-disabled);
+}
+
+/* Small size menu */
+.menu-sm .menu-item {
+  padding: var(--space-3xs) var(--space-xs);
+  font-size: var(--font-size-body-xs);
+}
+.menu-sm .menu-item-sub {
+  font-size: var(--font-size-body-2xs);
 }
 
 .menu-item-label {
