@@ -777,22 +777,22 @@ export default function ShowcasePage() {
           <div className="row-label" style={{ marginBottom: "var(--space-md)" }}>Image Card with Hover Link Icon</div>
           <div className="component-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))" }}>
             <ImageCard 
-              image="https://images.unsplash.com/photo-1677442d019cecf8cbb83b361ba5f95a461407f22d309eea5fdd1b5cf29acba?w=400&h=250&fit=crop"
-              imageAlt="ChatGPT logo with gradient background"
+              image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:rgb(100,200,255);stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:rgb(0,100,200);stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='250' fill='url(%23grad1)'/%3E%3C/svg%3E"
+              imageAlt="Gradient placeholder"
               title="ChatGPT"
               subtitle="by OpenAI • Free for government employees"
               href="#"
             />
             <ImageCard 
-              image="https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=400&h=250&fit=crop"
-              imageAlt="Bard AI logo"
+              image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:rgb(255,200,100);stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:rgb(200,100,0);stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='250' fill='url(%23grad2)'/%3E%3C/svg%3E"
+              imageAlt="Gradient placeholder"
               title="Google Bard"
               subtitle="by Google • Experimental AI assistant"
               href="#"
             />
             <ImageCard 
-              image="https://images.unsplash.com/photo-1611532736000-bfe13ce20207?w=400&h=250&fit=crop"
-              imageAlt="Claude AI logo"
+              image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:rgb(150,100,200);stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:rgb(50,50,150);stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='250' fill='url(%23grad3)'/%3E%3C/svg%3E"
+              imageAlt="Gradient placeholder"
               title="Claude"
               subtitle="by Anthropic • Advanced AI assistant"
               href="#"
