@@ -3190,9 +3190,9 @@ code, pre {
 }
 
 .sidebar-nav-heading {
-  margin-top: var(--space-md);
+  margin-top: var(--space-lg);
   margin-bottom: var(--space-xs);
-  color: var(--color-text-placeholder);
+  color: var(--color-text-disabled);
   font-size: var(--font-size-body-xs);
   font-weight: var(--font-weight-semibold);
   text-transform: uppercase;
@@ -3235,6 +3235,119 @@ code, pre {
   color: var(--color-text-placeholder);
   font-size: var(--font-size-body-xs);
   line-height: var(--line-height-body-xs);
+}
+
+/* ============================================================
+   Sidebar Navigation Panel - Icon Variant (Stark Colors)
+   ============================================================ */
+
+.sidebar-nav-panel-icons {
+  width: 200px;
+  min-height: 700px;
+  background: var(--color-bg);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transition: width var(--transition-base);
+}
+
+.sidebar-nav-panel-icons.sidebar-nav-panel-icons-closed {
+  width: 66px;
+  align-items: center;
+  padding: 12px;
+}
+
+.sidebar-nav-panel-icons.sidebar-nav-panel-icons-closed .sidebar-nav-panel-top {
+  justify-content: center;
+  width: auto;
+}
+
+.sidebar-nav-panel-icons.sidebar-nav-panel-icons-closed .sidebar-nav-new-app-icons-collapsed {
+  align-self: center;
+}
+
+.sidebar-nav-panel-icons.sidebar-nav-panel-icons-closed .sidebar-nav-footer {
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+
+.sidebar-nav-new-app-icons {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-body);
+  height: 40px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-regular);
+  padding: 0 var(--space-sm);
+  transition: width var(--transition-base), padding var(--transition-base), margin var(--transition-base), background var(--transition-fast);
+  cursor: pointer;
+}
+
+.sidebar-nav-new-app-icons:hover {
+  background: var(--color-bg-subtle);
+}
+
+.sidebar-nav-new-app-icons-collapsed {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  justify-content: center;
+  align-self: center;
+  gap: 0;
+}
+
+.sidebar-nav-menu-wrap-icons .menu {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.sidebar-nav-menu-wrap-icons .menu-item {
+  color: var(--color-text-body);
+  border-bottom: none;
+  border-radius: var(--radius-sm);
+  padding: 7px var(--space-sm);
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body-sm);
+}
+
+.sidebar-nav-menu-wrap-icons .menu-item .menu-item-sub {
+  display: none;
+}
+
+.sidebar-nav-menu-wrap-icons .menu-item svg {
+  flex-shrink: 0;
+}
+
+.sidebar-nav-menu-wrap-icons .menu-item-icon > svg:last-child {
+  display: none;
+}
+
+.sidebar-nav-menu-wrap-icons .menu-item-active {
+  background: var(--color-bg-subtle);
+  color: var(--color-text-secondary);
+}
+
+.sidebar-nav-menu-wrap-icons .menu-item:hover:not(:disabled):not(.menu-item-active),
+.sidebar-nav-menu-wrap-icons .menu-item:focus-visible:not(.menu-item-active) {
+  background: var(--color-bg-subtle);
+  color: var(--color-text-secondary);
 }
 
 /* ============================================================

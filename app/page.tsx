@@ -29,6 +29,7 @@ import {
   Menu,
   DrawerButton,
   SidebarNavigationPanel,
+    SidebarNavigationPanelWithIcons,
   USGRibbon,
   DonutChart,
   BarChart,
@@ -248,6 +249,7 @@ const navSections = [
     { id: "modal", label: "Modal" },
     { id: "divider", label: "Divider" },
     { id: "sidebar-navigation-panel", label: "Sidebar Navigation" },
+      { id: "sidebar-navigation-panel-icons", label: "Sidebar with Icons" },
     { id: "usg-ribbon", label: "USG Ribbon" },
   ]},
   { group: "About", items: [
@@ -1303,7 +1305,18 @@ export default function ShowcasePage() {
         </div>
       </Section>
 
-      {/* ─── 24. USG Ribbon ─── */}
+      {/* ─── 24. Sidebar Navigation Panel with Icons ─── */}
+      <Section
+        id="sidebar-navigation-panel-icons"
+        title="Sidebar Navigation Panel with Icons"
+        description="Icon variant with stark color scheme - default background per mode and muted hover/active states."
+      >
+        <div className="sidebar-panel-showcase">
+          <SidebarNavigationPanelWithIcons />
+        </div>
+      </Section>
+
+      {/* ─── 25. USG Ribbon ─── */}
       <Section
         id="usg-ribbon"
         title="USG Ribbon"

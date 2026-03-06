@@ -26,5 +26,6 @@ export { Navbar } from "./Navbar";
 export { Menu } from "./Menu";
 export { DrawerButton } from "./DrawerButton";
 export { SidebarNavigationPanel } from "./SidebarNavigationPanel";
+export { SidebarNavigationPanelWithIcons } from "./SidebarNavigationPanelWithIcons";
 export { USGRibbon } from "./USGRibbon";
 export { DonutChart, BarChart, SmallKpiCard, CompletionTracker } from "./Charts";
