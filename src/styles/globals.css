@@ -2410,7 +2410,7 @@ code, pre {
 
 /* Small size menu items */
 .menu-sm .menu-item {
-  padding: var(--space-3xs) var(--space-xs);
+  padding: var(--space-2xs) var(--space-xs);
   font-size: var(--font-size-body-xs);
 }
 /* Separator below each item; none below last item or below disabled item */
@@ -2480,7 +2480,7 @@ code, pre {
 
 /* Small size menu */
 .menu-sm .menu-item {
-  padding: var(--space-3xs) var(--space-xs);
+  padding: var(--space-2xs) var(--space-xs);
   font-size: var(--font-size-body-xs);
 }
 .menu-sm .menu-item-sub {
