@@ -1693,6 +1693,7 @@ code, pre {
   opacity: 0;
   transition: opacity var(--transition-fast);
   flex-shrink: 0;
+  margin-right: var(--space-xs);
 }
 
 .image-card-link-icon svg {
