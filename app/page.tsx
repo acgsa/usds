@@ -793,8 +793,8 @@ export default function ShowcasePage() {
             <ImageCard 
               image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:rgb(150,100,200);stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:rgb(50,50,150);stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='250' fill='url(%23grad3)'/%3E%3C/svg%3E"
               imageAlt="Gradient placeholder"
-              title="Claude"
-              subtitle="by Anthropic • Advanced AI assistant"
+              title="Grok"
+              subtitle="by xAI • Advanced AI assistant"
               href="#"
             />
           </div>
