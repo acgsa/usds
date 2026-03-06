@@ -37,17 +37,16 @@ interface ImageCardProps {
   subtitle: string;
   href?: string;
   gradient?: "cyan" | "orange" | "purple";
-  imageRotate?: number;
 }
 
-export function ImageCard({ image = "", imageAlt = "", title, subtitle, href, gradient, imageRotate = 0 }: ImageCardProps) {
+export function ImageCard({ image = "", imageAlt = "", title, subtitle, href, gradient }: ImageCardProps) {
   const content = (
     <div className="image-card">
       <div className="image-card-image">
         {gradient ? (
           <div className={`image-card-gradient image-card-gradient-${gradient}`} />
         ) : (
-          <img src={image} alt={imageAlt} style={{ transform: imageRotate ? `rotate(${imageRotate}deg)` : undefined }} />
+          <img src={image} alt={imageAlt} />
         )}
       </div>
       <div className="image-card-content">

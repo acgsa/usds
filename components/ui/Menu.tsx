@@ -47,12 +47,14 @@ type MenuItem = MenuItemIcon | MenuItemSubtext;
 interface MenuProps {
   items: MenuItem[];
   size?: "md" | "sm";
+  defaultActiveIndex?: number | null;
+  allowDeselect?: boolean;
 }
 
 /* ─── Component ─── */
 
-export function Menu({ items, size = "md" }: MenuProps) {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+export function Menu({ items, size = "md", defaultActiveIndex = null, allowDeselect = true }: MenuProps) {
+  const [activeIndex, setActiveIndex] = useState<number | null>(defaultActiveIndex);
   const sizeClass = size === "sm" ? "menu-sm" : "";
 
   return (
@@ -68,7 +70,7 @@ export function Menu({ items, size = "md" }: MenuProps) {
               className={`menu-item menu-item-icon ${isActive ? "menu-item-active" : ""}`.trim()}
               disabled={item.disabled}
               onClick={() => {
-                setActiveIndex(isActive ? null : i);
+                setActiveIndex(isActive ? (allowDeselect ? null : i) : i);
                 item.onClick?.();
               }}
             >
@@ -86,7 +88,7 @@ export function Menu({ items, size = "md" }: MenuProps) {
             className={`menu-item menu-item-subtext ${isActive ? "menu-item-active" : ""}`.trim()}
             disabled={item.disabled}
             onClick={() => {
-              setActiveIndex(isActive ? null : i);
+              setActiveIndex(isActive ? (allowDeselect ? null : i) : i);
               item.onClick?.();
             }}
           >

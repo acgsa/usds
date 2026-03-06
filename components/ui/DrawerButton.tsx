@@ -15,6 +15,7 @@ export function DrawerButton({
   state = "open",
   direction = "right",
   disabled = false,
+  className,
   ...props
 }: DrawerButtonProps) {
   // For right drawer: open shows DrawerOpen, hover ArrowLineLeft; closed shows DrawerClosed, hover ArrowLineRight
@@ -26,7 +27,7 @@ export function DrawerButton({
 
   return (
     <button
-      className={`drawer-button drawer-button-${state} drawer-button-${direction}`}
+      className={`drawer-button drawer-button-${state} drawer-button-${direction} ${className || ""}`.trim()}
       disabled={disabled}
       type="button"
       {...props}

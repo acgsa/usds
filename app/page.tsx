@@ -28,6 +28,8 @@ import {
   Divider,
   Menu,
   DrawerButton,
+  SidebarNavigationPanel,
+  USGRibbon,
   DonutChart,
   BarChart,
   SmallKpiCard,
@@ -245,6 +247,8 @@ const navSections = [
   { group: "Layout", items: [
     { id: "modal", label: "Modal" },
     { id: "divider", label: "Divider" },
+    { id: "sidebar-navigation-panel", label: "Sidebar Navigation" },
+    { id: "usg-ribbon", label: "USG Ribbon" },
   ]},
   { group: "About", items: [
     { id: "about", label: "About" },
@@ -1286,6 +1290,26 @@ export default function ShowcasePage() {
           <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Subtle</div>
           <Divider subtle />
         </div>
+      </Section>
+
+      {/* ─── 23. Sidebar Navigation Panel ─── */}
+      <Section
+        id="sidebar-navigation-panel"
+        title="Sidebar Navigation Panel"
+        description="Collapsible left navigation panel using Drawer Button, Menu items, and Avatar."
+      >
+        <div className="sidebar-panel-showcase">
+          <SidebarNavigationPanel />
+        </div>
+      </Section>
+
+      {/* ─── 24. USG Ribbon ─── */}
+      <Section
+        id="usg-ribbon"
+        title="USG Ribbon"
+        description="Official US Government banner for indicating government websites. Adapts to light and dark modes."
+      >
+        <USGRibbon />
       </Section>
 
       {/* ─── About ─── */}
