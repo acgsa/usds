@@ -18,6 +18,9 @@
     "dist"
   ],
   "scripts": {
+    "sync:icons": "node scripts/sync-icons.mjs",
+    "predev": "npm run sync:icons",
+    "prebuild": "npm run sync:icons",
     "dev": "next dev",
     "build": "next build",
     "build:lib": "vite build",

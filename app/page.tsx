@@ -1192,7 +1192,7 @@ export default function ShowcasePage() {
       <Section
         id="dropdown"
         title="Dropdown"
-        description="Dropdown trigger button with chevron in two sizes. Supports default, hover, focus, and disabled states. Click to open the action menu."
+        description="Dropdown trigger button with chevron in three sizes. Supports default, hover, focus, and disabled states. Click to open the action menu."
       >
         <div style={{ display: "grid", gridTemplateColumns: "auto auto auto", gap: "var(--space-lg)", justifyContent: "start", alignItems: "start" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-sm)" }}>

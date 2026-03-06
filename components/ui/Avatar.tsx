@@ -42,6 +42,34 @@ export function Avatar({
   );
 }
 
+/* Avatar with full name (middle-aligned) */
+interface AvatarWithFullNameProps extends Omit<AvatarProps, "initials"> {
+  initials: string;
+  fullName: string;
+}
+
+export function AvatarWithFullName({
+  initials,
+  fullName,
+  size = "md",
+  shape = "circle",
+  color,
+  ...avatarProps
+}: AvatarWithFullNameProps) {
+  return (
+    <div className="avatar-with-full-name">
+      <Avatar
+        initials={initials}
+        size={size}
+        shape={shape}
+        color={color}
+        {...avatarProps}
+      />
+      <span className="avatar-with-full-name-text">{fullName}</span>
+    </div>
+  );
+}
+
 /* Avatar with full name and government entity (profile style) */
 interface AvatarWithInfoProps extends Omit<AvatarProps, "initials"> {
   initials: string;

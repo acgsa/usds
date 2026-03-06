@@ -12,7 +12,7 @@ export { Toggle } from "./Toggle";
 export { Card } from "./Card";
 export { Badge } from "./Badge";
 export { Alert } from "./Alert";
-export { Avatar, AvatarWithInfo } from "./Avatar";
+export { Avatar, AvatarWithFullName, AvatarWithInfo } from "./Avatar";
 export { Tabs } from "./Tabs";
 export { Table, TableHeader, type TableHeaderAction } from "./Table";
 export { Modal } from "./Modal";

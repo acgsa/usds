@@ -791,6 +791,45 @@ code, pre {
   gap: var(--space-lg);
 }
 
+.iconography-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-sm);
+}
+
+.iconography-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  border: var(--border-sm) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  min-height: 104px;
+}
+
+.iconography-svg {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-icon);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.iconography-title {
+  font-size: var(--font-size-body-xs);
+  color: var(--color-text-body);
+  text-align: center;
+  line-height: var(--line-height-body-xs);
+}
+
 .row-label {
   font-size: var(--font-size-body-xs);
   font-weight: var(--font-weight-semibold);
@@ -2189,6 +2228,22 @@ code, pre {
 .avatar-status-busy { background: var(--green-500); }
 
 .avatar-square ~ .avatar-status { right: -4px; top: 5px; }
+
+/* Avatar with full name only (middle-aligned) */
+.avatar-with-full-name {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.avatar-with-full-name .avatar-wrapper {
+  flex-shrink: 0;
+}
+.avatar-with-full-name-text {
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  line-height: var(--line-height-body-md);
+}
 
 /* Avatar with full name + government entity */
 .avatar-with-info {
