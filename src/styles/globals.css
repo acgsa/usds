@@ -1658,7 +1658,7 @@ code, pre {
   align-items: flex-start;
   gap: var(--space-md);
   padding-left: 0;
-  padding-right: var(--space-md);
+  padding-right: 0;
   padding-top: var(--space-md);
   padding-bottom: var(--space-md);
 }
@@ -1693,7 +1693,6 @@ code, pre {
   opacity: 0;
   transition: opacity var(--transition-fast);
   flex-shrink: 0;
-  margin-right: var(--space-xs);
 }
 
 .image-card-link-icon svg {
