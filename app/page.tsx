@@ -13,7 +13,7 @@ import {
   Card,
   Badge,
   Alert,
-  Avatar, AvatarWithInfo,
+  Avatar, AvatarWithFullName, AvatarWithInfo,
   Tabs,
   Table,
   TableHeader,
@@ -38,6 +38,7 @@ import {
   CopyIcon,
   EyeIcon,
 } from "@/components/ui/Icons";
+import { ICONOGRAPHY_ITEMS } from "./iconographyManifest";
 
 /* ───────────────────── helpers ───────────────────── */
 
@@ -149,6 +150,10 @@ const spacingTokens = [
   { name: "--space-3xl", value: "48px" },
 ];
 
+/* ───────────────────── iconography display ───────────────────── */
+
+const iconographyItems = ICONOGRAPHY_ITEMS;
+
 /* ───────────────────── table sample data (cell components: Link, Checkmark, Actions, Chip) ───────────────────── */
 
 const tableColumns = [
@@ -208,6 +213,7 @@ const navSections = [
     { id: "typography", label: "Typography" },
     { id: "color-palette", label: "Color Palette" },
     { id: "spacing", label: "Spacing Scale" },
+    { id: "iconography", label: "Iconography" },
   ]},
   { group: "Actions", items: [
     { id: "buttons", label: "Buttons" },
@@ -473,7 +479,30 @@ export default function ShowcasePage() {
         </div>
       </Section>
 
-      {/* ─── 4. Buttons ─── */}
+      {/* ─── 4. Iconography ─── */}
+      <Section
+        id="iconography"
+        title="Iconography"
+        description="A reference of all SVG files from src/icons. Icons are shown in alphabetical order by title."
+      >
+        <div className="iconography-grid">
+          {iconographyItems.map(({ fileName, title, src }) => (
+            <div key={fileName} className="iconography-item">
+              <span
+                aria-hidden
+                className="iconography-svg"
+                style={{
+                  WebkitMaskImage: `url("${src}")`,
+                  maskImage: `url("${src}")`,
+                }}
+              />
+              <span className="iconography-title">{title}</span>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* ─── 5. Buttons ─── */}
       <Section
         id="buttons"
         title="Buttons"
@@ -880,6 +909,14 @@ export default function ShowcasePage() {
           </div>
         </div>
         <div className="avatar-subsection">
+          <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>With Full Name</div>
+          <div className="component-row" style={{ flexDirection: "column", gap: "var(--space-md)", alignItems: "flex-start" }}>
+            <AvatarWithFullName initials="AC" fullName="Alex Chen" color="green" size="sm" />
+            <AvatarWithFullName initials="JD" fullName="Jane Doe" color="blue" />
+            <AvatarWithFullName initials="MK" fullName="Morgan Kim" color="violet" size="lg" shape="square" />
+          </div>
+        </div>
+        <div className="avatar-subsection">
           <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>With full name and government entity</div>
           <div className="component-row">
             <AvatarWithInfo initials="ZW" fullName="Full Name" governmentEntity="Government Entity" color="steel" />
@@ -1136,7 +1173,6 @@ export default function ShowcasePage() {
           </div>
         </div>
 
-        <div className="row-label" style={{ marginBottom: "var(--space-xs)", marginTop: "var(--space-lg)" }}>Drawer Button</div>
         <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-sm)", alignItems: "start" }}>
           <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Interactive Drawer Toggle</div>
           <div style={{ display: "flex", gap: "var(--space-sm)", alignItems: "center" }}>
