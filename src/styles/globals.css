@@ -1634,6 +1634,7 @@ code, pre {
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: var(--color-bg-muted);
+  border-radius: 4px;
 }
 
 .image-card-image img {
