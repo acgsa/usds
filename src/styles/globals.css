@@ -1642,7 +1642,7 @@ code, pre {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform var(--transition-base);
+  transition: transform 0.4s ease;
 }
 
 .image-card-content {
