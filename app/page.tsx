@@ -777,22 +777,22 @@ export default function ShowcasePage() {
           <div className="row-label" style={{ marginBottom: "var(--space-md)" }}>Image Card with Hover Link Icon</div>
           <div className="component-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))" }}>
             <ImageCard 
-              image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:rgb(100,200,255);stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:rgb(0,100,200);stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='250' fill='url(%23grad1)'/%3E%3C/svg%3E"
-              imageAlt="Gradient placeholder"
+              image="https://images.unsplash.com/photo-1614854262318-831574f15f1f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              imageAlt="ChatGPT image"
               title="ChatGPT"
               subtitle="by OpenAI • Free for government employees"
               href="#"
             />
             <ImageCard 
-              image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:rgb(255,200,100);stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:rgb(200,100,0);stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='250' fill='url(%23grad2)'/%3E%3C/svg%3E"
-              imageAlt="Gradient placeholder"
-              title="Google Bard"
-              subtitle="by Google • Experimental AI assistant"
+              image="https://images.unsplash.com/photo-1660491630578-4299a3c09db0?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              imageAlt="Gemini image"
+              title="Gemini"
+              subtitle="by Google • Advanced AI model"
               href="#"
             />
             <ImageCard 
-              image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:rgb(150,100,200);stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:rgb(50,50,150);stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='250' fill='url(%23grad3)'/%3E%3C/svg%3E"
-              imageAlt="Gradient placeholder"
+              image="https://images.unsplash.com/photo-1614849286447-fb815456e5a5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              imageAlt="Grok image"
               title="Grok"
               subtitle="by xAI • Advanced AI assistant"
               href="#"

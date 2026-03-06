@@ -1634,7 +1634,7 @@ code, pre {
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: var(--color-bg-muted);
-  border-radius: 4px;
+  border-radius: var(--radius-md);
 }
 
 .image-card-image img {
@@ -1642,6 +1642,7 @@ code, pre {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform var(--transition-base);
 }
 
 .image-card-content {
@@ -1654,10 +1655,11 @@ code, pre {
 /* Text and icon layout - left-justified with image edge, icon on right */
 .image-card-text {
   display: flex;
-  align-items: flex-end;
-  gap: var(--space-sm);
-  padding: var(--space-md);
+  align-items: flex-start;
+  gap: var(--space-md);
   padding-left: 0;
+  padding-right: var(--space-md);
+  padding-top: var(--space-md);
   padding-bottom: 0;
 }
 
@@ -1666,7 +1668,6 @@ code, pre {
   display: flex;
   flex-direction: column;
   gap: var(--space-2xs);
-  padding-left: var(--space-md);
 }
 
 .image-card-title {
@@ -1692,7 +1693,6 @@ code, pre {
   opacity: 0;
   transition: opacity var(--transition-fast);
   flex-shrink: 0;
-  margin-right: var(--space-md);
 }
 
 .image-card-link-icon img {
@@ -1703,6 +1703,10 @@ code, pre {
 
 .image-card-link:hover .image-card-link-icon {
   opacity: 1;
+}
+
+.image-card-link:hover .image-card-image img {
+  transform: scale(1.08);
 }
 
 /* ============================================================
@@ -2929,6 +2933,49 @@ code, pre {
 .spinner-sm { width: 16px; height: 16px; border-width: 2px; }
 .spinner-md { width: 24px; height: 24px; border-width: 2px; }
 .spinner-lg { width: 36px; height: 36px; border-width: 3px; }
+
+/* Animated gradients for image cards */
+@keyframes gradient-cyan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gradient-orange {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gradient-purple {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.image-card-gradient {
+  width: 100%;
+  height: 100%;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  background-size: 200% 200%;
+}
+
+.image-card-gradient-cyan {
+  background: linear-gradient(-45deg, #4DD0E1, #0288D1, #1565C0, #4DD0E1);
+  animation-name: gradient-cyan;
+}
+
+.image-card-gradient-orange {
+  background: linear-gradient(-45deg, #FFB74D, #FB8C00, #E65100, #FFB74D);
+  animation-name: gradient-orange;
+}
+
+.image-card-gradient-purple {
+  background: linear-gradient(-45deg, #9C27B0, #5E35B1, #4527A0, #9C27B0);
+  animation-name: gradient-purple;
+}
 
 /* ============================================================
    Tooltip
