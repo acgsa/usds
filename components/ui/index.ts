@@ -9,7 +9,7 @@ export { Select } from "./Select";
 export { Checkbox } from "./Checkbox";
 export { Radio } from "./Radio";
 export { Toggle } from "./Toggle";
-export { Card } from "./Card";
+export { Card, ImageCard } from "./Card";
 export { Badge } from "./Badge";
 export { Alert } from "./Alert";
 export { Avatar, AvatarWithFullName, AvatarWithInfo } from "./Avatar";

@@ -11,6 +11,7 @@ import {
   Radio,
   Toggle,
   Card,
+  ImageCard,
   Badge,
   Alert,
   Avatar, AvatarWithFullName, AvatarWithInfo,
@@ -770,6 +771,33 @@ export default function ShowcasePage() {
           <Card size="lg" title="Large Card" footer={<Button variant="outline" size="md">Learn More</Button>}>
             Spacious card for feature highlights or hero sections. Uses a larger padding area than the other cards.
           </Card>
+        </div>
+
+        <div style={{ marginTop: "var(--space-xl)" }}>
+          <div className="row-label" style={{ marginBottom: "var(--space-md)" }}>Image Card with Hover Link Icon</div>
+          <div className="component-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))" }}>
+            <ImageCard 
+              image="https://images.unsplash.com/photo-1677442d019cecf8cbb83b361ba5f95a461407f22d309eea5fdd1b5cf29acba?w=400&h=250&fit=crop"
+              imageAlt="ChatGPT logo with gradient background"
+              title="ChatGPT"
+              subtitle="by OpenAI • Free for government employees"
+              href="#"
+            />
+            <ImageCard 
+              image="https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=400&h=250&fit=crop"
+              imageAlt="Bard AI logo"
+              title="Google Bard"
+              subtitle="by Google • Experimental AI assistant"
+              href="#"
+            />
+            <ImageCard 
+              image="https://images.unsplash.com/photo-1611532736000-bfe13ce20207?w=400&h=250&fit=crop"
+              imageAlt="Claude AI logo"
+              title="Claude"
+              subtitle="by Anthropic • Advanced AI assistant"
+              href="#"
+            />
+          </div>
         </div>
       </Section>
 
