@@ -30,6 +30,7 @@ interface MenuItemIcon {
   type: "icon";
   label: string;
   icon?: React.ReactNode;
+  activeIcon?: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
 }
@@ -74,7 +75,7 @@ export function Menu({ items, size = "md", defaultActiveIndex = null, allowDesel
                 item.onClick?.();
               }}
             >
-              {item.icon || <GlobeIcon />}
+              {(isActive ? item.activeIcon : item.icon) || item.icon || <GlobeIcon />}
               <span className="menu-item-label">{item.label}</span>
               <ChevronDown />
             </button>

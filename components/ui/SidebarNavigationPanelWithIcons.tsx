@@ -22,10 +22,24 @@ const HomeIcon = () => (
   </svg>
 );
 
+const HomeIconFilled = () => (
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M9 2.25L2.25 6.75V15.75H15.75V6.75L9 2.25Z" fill="currentColor"/>
+    <rect x="7.125" y="9" width="3.75" height="6.75" fill="var(--color-bg-subtle)"/>
+  </svg>
+);
+
 const DocumentIcon = () => (
   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M10.5 2.25H4.5C4.30109 2.25 4.11032 2.32902 3.96967 2.46967C3.82902 2.61032 3.75 2.80109 3.75 3V15C3.75 15.1989 3.82902 15.3897 3.96967 15.5303C4.11032 15.671 4.30109 15.75 4.5 15.75H13.5C13.6989 15.75 13.8897 15.671 14.0303 15.5303C14.171 15.3897 14.25 15.1989 14.25 15V6L10.5 2.25Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M10.5 2.25V6H14.25" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const DocumentIconFilled = () => (
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M4.5 2.25H10.5L14.25 6V15.75H4.5V2.25Z" fill="currentColor"/>
+    <path d="M10.5 2.25V6H14.25" fill="var(--color-bg-subtle)"/>
   </svg>
 );
 
@@ -36,15 +50,34 @@ const CheckSquareIcon = () => (
   </svg>
 );
 
+const CheckSquareIconFilled = () => (
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="3" y="3.75" width="12" height="11.25" rx="1.5" fill="currentColor"/>
+    <path d="M6 9L8.25 11.25L12 6.75" stroke="var(--color-bg-subtle)" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
 const ChatIcon = () => (
   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M15.75 11.25C15.75 11.6478 15.592 12.0294 15.3107 12.3107C15.0294 12.592 14.6478 12.75 14.25 12.75H5.25L2.25 15.75V3.75C2.25 3.35218 2.40804 2.97064 2.68934 2.68934C2.97064 2.40804 3.35218 2.25 3.75 2.25H14.25C14.6478 2.25 15.0294 2.40804 15.3107 2.68934C15.592 2.97064 15.75 3.35218 15.75 3.75V11.25Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
+const ChatIconFilled = () => (
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M2.25 2.25H15.75V12.75H5.25L2.25 15.75V2.25Z" fill="currentColor"/>
+  </svg>
+);
+
 const BookIcon = () => (
   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M3 3.75C3 3.35218 3.15804 2.97064 3.43934 2.68934C3.72064 2.40804 4.10218 2.25 4.5 2.25H13.5C13.8978 2.25 14.2794 2.40804 14.5607 2.68934C14.842 2.97064 15 3.35218 15 3.75V15.75L9 12.75L3 15.75V3.75Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const BookIconFilled = () => (
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M3 3.75C3 2.92157 3.67157 2.25 4.5 2.25H13.5C14.3284 2.25 15 2.92157 15 3.75V15.75L9 12.75L3 15.75V3.75Z" fill="currentColor"/>
   </svg>
 );
 
@@ -55,11 +88,26 @@ const GearIcon = () => (
   </svg>
 );
 
+const GearIconFilled = () => (
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="9" cy="9" r="5.25" fill="currentColor"/>
+    <circle cx="9" cy="9" r="2.25" fill="var(--color-bg-subtle)"/>
+  </svg>
+);
+
 const HelpIcon = () => (
   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <circle cx="9" cy="9" r="6.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M6.8175 6.75C6.97718 6.26118 7.30457 5.84669 7.73967 5.57465C8.17477 5.3026 8.69166 5.18922 9.19931 5.25223C9.70696 5.31524 10.1748 5.55056 10.5192 5.91755C10.8637 6.28454 11.0625 6.76046 11.0813 7.2585C11.0813 9 8.95688 9.87 8.95688 9.87" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     <circle cx="9" cy="12.375" r="0.5625" fill="currentColor"/>
+  </svg>
+);
+
+const HelpIconFilled = () => (
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="9" cy="9" r="6.75" fill="currentColor"/>
+    <path d="M6.82 6.75C6.98 6.26 7.3 5.85 7.74 5.57C8.17 5.3 8.69 5.19 9.2 5.25C9.71 5.32 10.17 5.55 10.52 5.92C10.86 6.28 11.06 6.76 11.08 7.26C11.08 9 8.96 9.87 8.96 9.87" stroke="var(--color-bg-subtle)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="9" cy="12.375" r="0.5625" fill="var(--color-bg-subtle)"/>
   </svg>
 );
 
@@ -102,17 +150,17 @@ export function SidebarNavigationPanelWithIcons() {
         <span className="sidebar-nav-new-app-text">New Application</span>
       </button>
 
-      <div className={`sidebar-nav-menus${isOpen ? "" : " sidebar-nav-menus-hidden"}`}>
+      <div className="sidebar-nav-menus">
         <div className="sidebar-nav-menu-wrap-icons">
           <Menu
             size="sm"
             defaultActiveIndex={0}
             allowDeselect={false}
             items={[
-              { type: "icon", label: "Home", icon: <HomeIcon /> },
-              { type: "icon", label: "Applications", icon: <DocumentIcon /> },
-              { type: "icon", label: "My Tasks", icon: <CheckSquareIcon /> },
-              { type: "icon", label: "Messages", icon: <ChatIcon /> },
+              { type: "icon", label: "Home", icon: <HomeIcon />, activeIcon: <HomeIconFilled /> },
+              { type: "icon", label: "Applications", icon: <DocumentIcon />, activeIcon: <DocumentIconFilled /> },
+              { type: "icon", label: "My Tasks", icon: <CheckSquareIcon />, activeIcon: <CheckSquareIconFilled /> },
+              { type: "icon", label: "Messages", icon: <ChatIcon />, activeIcon: <ChatIconFilled /> },
             ]}
           />
         </div>
@@ -122,10 +170,10 @@ export function SidebarNavigationPanelWithIcons() {
           <Menu
             size="sm"
             items={[
-              { type: "icon", label: "Permit Types", icon: <DocumentIcon /> },
-              { type: "icon", label: "Regulations", icon: <BookIcon /> },
-              { type: "icon", label: "Resources", icon: <GearIcon /> },
-              { type: "icon", label: "Help Center", icon: <HelpIcon /> },
+              { type: "icon", label: "Permit Types", icon: <DocumentIcon />, activeIcon: <DocumentIconFilled /> },
+              { type: "icon", label: "Regulations", icon: <BookIcon />, activeIcon: <BookIconFilled /> },
+              { type: "icon", label: "Resources", icon: <GearIcon />, activeIcon: <GearIconFilled /> },
+              { type: "icon", label: "Help Center", icon: <HelpIcon />, activeIcon: <HelpIconFilled /> },
             ]}
           />
         </div>
