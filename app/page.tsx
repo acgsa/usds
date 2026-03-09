@@ -249,7 +249,6 @@ const navSections = [
     { id: "modal", label: "Modal" },
     { id: "divider", label: "Divider" },
     { id: "sidebar-navigation-panel", label: "Sidebar Navigation" },
-      { id: "sidebar-navigation-panel-icons", label: "Sidebar with Icons" },
     { id: "usg-ribbon", label: "USG Ribbon" },
   ]},
   { group: "About", items: [
