@@ -49,13 +49,34 @@ interface MenuProps {
   items: MenuItem[];
   size?: "md" | "sm";
   defaultActiveIndex?: number | null;
+  activeIndex?: number | null;
+  onActiveIndexChange?: (index: number | null) => void;
   allowDeselect?: boolean;
 }
 
 /* ─── Component ─── */
 
-export function Menu({ items, size = "md", defaultActiveIndex = null, allowDeselect = true }: MenuProps) {
-  const [activeIndex, setActiveIndex] = useState<number | null>(defaultActiveIndex);
+export function Menu({ 
+  items, 
+  size = "md", 
+  defaultActiveIndex = null, 
+  activeIndex: controlledActiveIndex,
+  onActiveIndexChange,
+  allowDeselect = true 
+}: MenuProps) {
+  const [internalActiveIndex, setInternalActiveIndex] = useState<number | null>(defaultActiveIndex);
+  
+  // Use controlled mode if activeIndex is provided, otherwise use internal state
+  const isControlled = controlledActiveIndex !== undefined;
+  const activeIndex = isControlled ? controlledActiveIndex : internalActiveIndex;
+  
+  const handleActiveIndexChange = (newIndex: number | null) => {
+    if (!isControlled) {
+      setInternalActiveIndex(newIndex);
+    }
+    onActiveIndexChange?.(newIndex);
+  };
+  
   const sizeClass = size === "sm" ? "menu-sm" : "";
 
   return (
@@ -71,7 +92,7 @@ export function Menu({ items, size = "md", defaultActiveIndex = null, allowDesel
               className={`menu-item menu-item-icon ${isActive ? "menu-item-active" : ""}`.trim()}
               disabled={item.disabled}
               onClick={() => {
-                setActiveIndex(isActive ? (allowDeselect ? null : i) : i);
+                handleActiveIndexChange(isActive ? (allowDeselect ? null : i) : i);
                 item.onClick?.();
               }}
             >
@@ -89,7 +110,7 @@ export function Menu({ items, size = "md", defaultActiveIndex = null, allowDesel
             className={`menu-item menu-item-subtext ${isActive ? "menu-item-active" : ""}`.trim()}
             disabled={item.disabled}
             onClick={() => {
-              setActiveIndex(isActive ? (allowDeselect ? null : i) : i);
+              handleActiveIndexChange(isActive ? (allowDeselect ? null : i) : i);
               item.onClick?.();
             }}
           >
