@@ -1294,29 +1294,30 @@ export default function ShowcasePage() {
         </div>
       </Section>
 
-      {/* ─── 23. Sidebar Navigation Panel ─── */}
+      {/* ─── 23. Sidebar Navigation ─── */}
       <Section
         id="sidebar-navigation-panel"
-        title="Sidebar Navigation Panel"
-        description="Collapsible left navigation panel using Drawer Button, Menu items, and Avatar."
+        title="Sidebar Navigation"
+        description="Two collapsible left-navigation options sharing the same structure, with different visual treatments and item styles."
       >
-        <div className="sidebar-panel-showcase">
+        <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Option 1: Subtle color scheme (text nav items)</div>
+        <p className="section-desc" style={{ marginBottom: "var(--space-sm)", maxWidth: 560 }}>
+          Uses a subtle background treatment with text-only navigation items for a quieter, content-first presentation.
+        </p>
+        <div className="sidebar-panel-showcase" style={{ marginBottom: "var(--space-xl)" }}>
           <SidebarNavigationPanel />
         </div>
-      </Section>
 
-      {/* ─── 24. Sidebar Navigation Panel with Icons ─── */}
-      <Section
-        id="sidebar-navigation-panel-icons"
-        title="Sidebar Navigation Panel with Icons"
-        description="Icon variant with stark color scheme - default background per mode and muted hover/active states."
-      >
+        <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Option 2: Stark color scheme (icons + text nav items)</div>
+        <p className="section-desc" style={{ marginBottom: "var(--space-sm)", maxWidth: 560 }}>
+          Uses a higher-contrast visual style with icons paired with text labels to improve quick scanning and recognition.
+        </p>
         <div className="sidebar-panel-showcase">
           <SidebarNavigationPanelWithIcons />
         </div>
       </Section>
 
-      {/* ─── 25. USG Ribbon ─── */}
+      {/* ─── 24. USG Ribbon ─── */}
       <Section
         id="usg-ribbon"
         title="USG Ribbon"
