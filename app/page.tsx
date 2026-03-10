@@ -489,7 +489,7 @@ export default function ShowcasePage() {
       <Section
         id="iconography"
         title="Iconography"
-        description="A reference of all SVG files from src/icons. Icons are shown in alphabetical order by title."
+        description="A reference of all SVG files from src/icons. Icons are shown in alphabetical order by title. Our custom icons extend Heroicons and Lucide, matching their 24px grid, linear style, and 1.5px stroke widths—so they can integrate seamlessly and complement either set."
       >
         <div className="iconography-grid">
           {iconographyItems.map(({ fileName, title, src }) => (
