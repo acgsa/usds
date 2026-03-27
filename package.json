@@ -18,14 +18,9 @@
     "dist"
   ],
   "scripts": {
-    "sync:icons": "node scripts/sync-icons.mjs",
-    "predev": "npm run sync:icons",
-    "prebuild": "npm run sync:icons",
-    "dev": "next dev",
-    "build": "next build",
-    "build:lib": "vite build",
-    "start": "next start",
-    "lint": "eslint"
+    "build": "rm -rf dist && vite build",
+    "postbuild": "node scripts/prepend-use-client.cjs",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "next": "16.1.6",

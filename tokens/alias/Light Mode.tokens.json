@@ -1415,6 +1415,45 @@
               "com.figma.isOverride": true
             }
           },
+          "choice-on": {
+            "$type": "color",
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [
+                0.95686274766922,
+                0.9607843160629272,
+                0.9725490212440491
+              ],
+              "alpha": 1,
+              "hex": "#F4F5F8"
+            }
+          },
+          "choice-hover": {
+            "$type": "color",
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [
+                0.9019607901573181,
+                0.9176470637321472,
+                0.9411764740943909
+              ],
+              "alpha": 1,
+              "hex": "#E6EAF0"
+            }
+          },
+          "choice-active": {
+            "$type": "color",
+            "$value": {
+              "colorSpace": "srgb",
+              "components": [
+                0,
+                0,
+                0
+              ],
+              "alpha": 1,
+              "hex": "#000000"
+            }
+          },
           "button-disabled": {
             "$type": "color",
             "$value": {

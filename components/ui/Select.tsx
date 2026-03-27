@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 
 export type SelectSize = "sm" | "md" | "lg";
 
@@ -15,7 +15,8 @@ export function Select({
   id,
   ...props
 }: SelectProps) {
-  const inputId = id || `select-${Math.random().toString(36).slice(2, 8)}`;
+  const generatedId = useId();
+  const inputId = id || generatedId;
   return (
     <div className="input-wrapper">
       {label && (

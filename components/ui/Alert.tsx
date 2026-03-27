@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 type AlertVariant = "info" | "success" | "warning" | "error";

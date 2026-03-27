@@ -1,11 +1,12 @@
+"use client";
 /**
  * @acgsa/usds — US Design System React library
  * Export components and styles for use in any React app.
  */
 import "./styles/globals.css";
 
-export { ThemeProvider } from "../components/ThemeProvider";
 export {
+  ThemeProvider,
   Button,
   PillButton,
   IconButton,
@@ -18,16 +19,17 @@ export {
   Select,
   Checkbox,
   Radio,
+  FormChoice,
   Toggle,
   Card,
   Badge,
+  type BadgeColor,
   Alert,
   Avatar,
   AvatarWithInfo,
   Tabs,
   Table,
   TableHeader,
-  type TableHeaderAction,
   Modal,
   Progress,
   Spinner,
@@ -37,8 +39,12 @@ export {
   Divider,
   Navbar,
   Menu,
+  SidebarNavigationPanel,
+  ArrowDownIcon,
   DonutChart,
   BarChart,
   SmallKpiCard,
   CompletionTracker,
+  DrawerButton,
+  DownloadIcon,
 } from "../components/ui";

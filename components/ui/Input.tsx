@@ -1,3 +1,4 @@
+"use client";
 import React, { useId } from "react";
 
 export type InputSize = "sm" | "md" | "lg";

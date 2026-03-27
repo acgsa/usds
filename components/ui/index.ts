@@ -1,4 +1,6 @@
+export { ThemeProvider } from "../ThemeProvider";
 export { Button, PillButton, IconButton, PlusIcon } from "./Button";
+export { ArrowDownIcon, DownloadIcon } from "./Icons";
 export { ActionButton } from "./ActionButton";
 export { Link } from "./Link";
 export { ButtonGroup } from "./ButtonGroup";
@@ -8,9 +10,10 @@ export { Textarea } from "./Textarea";
 export { Select } from "./Select";
 export { Checkbox } from "./Checkbox";
 export { Radio } from "./Radio";
+export { FormChoice } from "./FormChoice";
 export { Toggle } from "./Toggle";
 export { Card, ImageCard } from "./Card";
-export { Badge } from "./Badge";
+export { Badge, type BadgeColor } from "./Badge";
 export { Alert } from "./Alert";
 export { Avatar, AvatarWithFullName, AvatarWithInfo } from "./Avatar";
 export { Tabs } from "./Tabs";

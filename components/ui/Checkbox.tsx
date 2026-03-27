@@ -1,3 +1,4 @@
+"use client";
 import React, { useId } from "react";
 
 interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
