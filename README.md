@@ -9,4 +9,6 @@ Upcoming changes:
 - Button text size to be doublechecked against Figma styling
 - Change focus-within to focus-visible
 - Add multiple choice tokens and component
+- Fix dropdowns
+- Fix charts
 - more tbd
