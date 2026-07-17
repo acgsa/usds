@@ -783,23 +783,23 @@ export default function ShowcasePage() {
           <div className="component-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))" }}>
             <ImageCard 
               image="https://images.unsplash.com/photo-1614854262318-831574f15f1f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              imageAlt="ChatGPT image"
-              title="ChatGPT"
-              subtitle="by OpenAI • Free for government employees"
+              imageAlt="Cybersecurity image"
+              title="Cybersecurity"
+              subtitle="Zero-trust principles for networks and data"
               href="#"
             />
             <ImageCard 
               image="https://images.unsplash.com/photo-1660491630578-4299a3c09db0?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              imageAlt="Gemini image"
-              title="Gemini"
-              subtitle="by Google • Advanced AI model"
+              imageAlt="Procurement image"
+              title="Procurement"
+              subtitle="Fraud-prevention in all major acquisitions"
               href="#"
             />
             <ImageCard 
               image="https://images.unsplash.com/photo-1614849286447-fb815456e5a5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              imageAlt="Grok image"
-              title="Grok"
-              subtitle="by xAI • Advanced AI assistant"
+              imageAlt="Data Strategy image"
+              title="Data Strategy"
+              subtitle="Standards for data sharing, quality, privacy"
               href="#"
             />
           </div>
