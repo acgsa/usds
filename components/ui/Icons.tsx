@@ -1,3 +1,11 @@
+"use client";
+import React from 'react';
+
+interface IconProps extends React.SVGAttributes<SVGSVGElement> {
+  className?: string;
+  size?: number;
+}
+
 /**
  * Arrow Down Icon
  * Displays a vertical arrow pointing down
@@ -25,13 +33,6 @@ export const ArrowDownIcon: React.FC<IconProps> = ({
     />
   </svg>
 );
-"use client";
-import React from 'react';
-
-interface IconProps extends React.SVGAttributes<SVGSVGElement> {
-  className?: string;
-  size?: number;
-}
 
 /**
  * Download Icon

@@ -54,7 +54,7 @@ function Section({
 }: {
   id?: string;
   title: string;
-  description: string;
+  description: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
@@ -349,7 +349,15 @@ export default function ShowcasePage() {
       <Section
         id="typography"
         title="Typography"
-        description="The primary typeface is Geist, while the secondary typeface is Space Mono, employed exclusively for monospace text. Headings utilize the primary typeface (Geist) in Bold or Semibold weights. Body text is set in the primary typeface using Regular or Semibold weights, as appropriate."
+        description={
+          <>
+            The primary typeface is{" "}
+            <a href="https://vercel.com/font" target="_blank" rel="noopener noreferrer" className="link-inline">Geist</a>
+            , while the secondary typeface is{" "}
+            <a href="https://fonts.google.com/specimen/Space+Mono" target="_blank" rel="noopener noreferrer" className="link-inline">Space Mono</a>
+            , employed exclusively for monospace text. Headings utilize the primary typeface (Geist) in Bold or Semibold weights. Body text is set in the primary typeface using Regular or Semibold weights, as appropriate.
+          </>
+        }
       >
         <div className="typography-subsection">
           <div className="row-label">Headings</div>
