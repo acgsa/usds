@@ -33,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: npm run build:next
         env:
           GITHUB_PAGES_BASE_PATH: /usds
 

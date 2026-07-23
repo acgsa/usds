@@ -20,6 +20,8 @@
   "scripts": {
     "build": "rm -rf dist && vite build",
     "postbuild": "node scripts/prepend-use-client.cjs",
+    "build:next": "next build",
+    "dev": "next dev",
     "prepare": "npm run build"
   },
   "dependencies": {
