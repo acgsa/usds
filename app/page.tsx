@@ -404,13 +404,13 @@ export default function ShowcasePage() {
             <div className="typography-density-block">
               <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Body Medium (Default Density)</div>
               <p style={{ fontSize: "var(--font-size-body-md)", lineHeight: "24px", marginBottom: 0, maxWidth: 640 }}>
-                Grok 4.1 is xAI&apos;s most advanced and versatile general-purpose language model, optimized to provide balanced performance across diverse tasks—from generating text and conducting in-depth analysis to handling interactive queries and automation workflows. Its speed, precision, and efficiency make it ideal for daily operational use across government agencies.
+                GSA is the engine of the American government, powering Real Estate, Acquisition, and Technology to accelerate federal mission delivery for the American people. Through innovative solutions in property management, procurement, and digital platforms, GSA drives efficiency, stewardship, and transformation across federal agencies every day.
               </p>
             </div>
             <div className="typography-density-block">
               <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Body Medium (Low Density)</div>
               <p style={{ fontSize: "var(--font-size-body-md)", lineHeight: "28px", marginBottom: 0, maxWidth: 640 }}>
-                Grok 4.1 is xAI&apos;s most advanced and versatile general-purpose language model, optimized to provide balanced performance across diverse tasks—from generating text and conducting in-depth analysis to handling interactive queries and automation workflows. Its speed, precision, and efficiency make it ideal for daily operational use across government agencies.
+                GSA is the engine of the American government, powering Real Estate, Acquisition, and Technology to accelerate federal mission delivery for the American people. Through innovative solutions in property management, procurement, and digital platforms, GSA drives efficiency, stewardship, and transformation across federal agencies every day.
               </p>
             </div>
           </div>
@@ -418,13 +418,13 @@ export default function ShowcasePage() {
             <div className="typography-density-block">
               <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Body Small (Default Density)</div>
               <p style={{ fontSize: "var(--font-size-body-sm)", lineHeight: "20px", marginBottom: 0, maxWidth: 640 }}>
-                Grok 4.1 is xAI&apos;s most advanced and versatile general-purpose language model, optimized to provide balanced performance across diverse tasks—from generating text and conducting in-depth analysis to handling interactive queries and automation workflows. Its speed, precision, and efficiency make it ideal for daily operational use across government agencies.
+                GSA is the engine of the American government, powering Real Estate, Acquisition, and Technology to accelerate federal mission delivery for the American people. Through innovative solutions in property management, procurement, and digital platforms, GSA drives efficiency, stewardship, and transformation across federal agencies every day.
               </p>
             </div>
             <div className="typography-density-block">
               <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Body Small (Low Density)</div>
               <p style={{ fontSize: "var(--font-size-body-sm)", lineHeight: "24px", marginBottom: 0, maxWidth: 640 }}>
-                Grok 4.1 is xAI&apos;s most advanced and versatile general-purpose language model, optimized to provide balanced performance across diverse tasks—from generating text and conducting in-depth analysis to handling interactive queries and automation workflows. Its speed, precision, and efficiency make it ideal for daily operational use across government agencies.
+                GSA is the engine of the American government, powering Real Estate, Acquisition, and Technology to accelerate federal mission delivery for the American people. Through innovative solutions in property management, procurement, and digital platforms, GSA drives efficiency, stewardship, and transformation across federal agencies every day.
               </p>
             </div>
           </div>
