@@ -1,4 +1,4 @@
-# USDS
+# A U.S. Design System (USDS)
 
 **A high-density design system for federal web applications.**
 
