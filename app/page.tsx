@@ -230,7 +230,7 @@ const navSections = [
   ]},
   { group: "Data Display", items: [
     { id: "cards", label: "Cards" },
-    { id: "tags", label: "Tags" },
+    { id: "tags", label: "Chips" },
     { id: "alerts", label: "Alerts" },
     { id: "avatars", label: "Avatars" },
     { id: "table", label: "Table" },
@@ -352,7 +352,7 @@ export default function ShowcasePage() {
         description={
           <>
             The primary typeface is{" "}
-            <a href="https://vercel.com/font" target="_blank" rel="noopener noreferrer" className="link-inline">Geist</a>
+            <a href="https://fonts.google.com/specimen/Geist" target="_blank" rel="noopener noreferrer" className="link-inline">Geist</a>
             , while the secondary typeface is{" "}
             <a href="https://fonts.google.com/specimen/Space+Mono" target="_blank" rel="noopener noreferrer" className="link-inline">Space Mono</a>
             , employed exclusively for monospace text. Headings utilize the primary typeface (Geist) in Bold or Semibold weights. Body text is set in the primary typeface using Regular or Semibold weights, as appropriate.
@@ -814,10 +814,10 @@ export default function ShowcasePage() {
         </div>
       </Section>
 
-      {/* ─── 11. Tags ─── */}
+      {/* ─── 11. Chips ─── */}
       <Section
         id="tags"
-        title="Tags"
+        title="Chips"
         description="Colored chip labels using design system tokens. Available in all 10 palette colors with optional leading icon, dismiss button, and status dot. Colors adapt for light and dark mode."
       >
         <div className="row-label" style={{ marginBottom: "var(--space-xs)" }}>Chips with icon &amp; dismiss</div>
@@ -827,7 +827,6 @@ export default function ShowcasePage() {
           <Badge color="red" icon dismissible>CHIP</Badge>
           <Badge color="orange" icon dismissible>CHIP</Badge>
           <Badge color="gold" icon dismissible>CHIP</Badge>
-          <Badge color="yellow" icon dismissible>CHIP</Badge>
           <Badge color="green" icon dismissible>CHIP</Badge>
           <Badge color="pink" icon dismissible>CHIP</Badge>
           <Badge color="turquoise" icon dismissible>CHIP</Badge>
@@ -842,7 +841,6 @@ export default function ShowcasePage() {
           <Badge color="red">Red</Badge>
           <Badge color="orange">Orange</Badge>
           <Badge color="gold">Gold</Badge>
-          <Badge color="yellow">Yellow</Badge>
           <Badge color="pink">Pink</Badge>
           <Badge color="turquoise">Turquoise</Badge>
           <Badge color="violet">Violet</Badge>
