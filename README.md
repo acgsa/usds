@@ -35,7 +35,7 @@ pnpm add github:acgsa/usds
 
 ---
 
-## Upcoming changes:
+## Upcoming changes
 
 - Table component to include full table header, action buttons, dropdown sorter, plus counter and pagination at bottom
 - Button text size to be checked against Figma styling
@@ -43,3 +43,20 @@ pnpm add github:acgsa/usds
 - Add multiple choice tokens and component
 - Fix dropdowns (incorrect border in component)
 - Fix charts (responsive issues)
+
+---
+
+## Figma
+
+Design tokens and components are also available as a Figma library:
+[USDS Figma Library  →](https://figma-gov.com/design/TpUFaDOqpGxZmKPVFHXBgS/A-US-Design-System?node-id=0-1&t=TyGXUa3OdjHxZwtd-1&view=variables)
+
+---
+
+## Contributing
+Issues and pull requests are welcome. Because this system is used in real federal prototypes, please open an issue first for any significant changes so we can discuss impact on existing consumers.
+
+---
+
+## License
+MIT — free to use, modify, and distribute for both government and public projects.
