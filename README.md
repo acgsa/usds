@@ -17,14 +17,6 @@ USDS is a React + TypeScript design system built for dense, operational governme
 - Official USG Ribbon
 - Works alongside or as a denser alternative to USWDS
 
-## Upcoming changes:
-- Table component to include full table header, action buttons, dropdown sorter, plus counter and pagination at bottom
-- Button text size to be checked against Figma styling
-- Change focus-within to focus-visible
-- Add multiple choice tokens and component
-- Fix dropdowns (incorrect border in component)
-- Fix charts (responsive issues)
-
 ---
 
 ## Quick Start
@@ -40,3 +32,13 @@ yarn add github:acgsa/usds
 # or
 pnpm add github:acgsa/usds
 
+---
+
+## Upcoming changes:
+
+- Table component to include full table header, action buttons, dropdown sorter, plus counter and pagination at bottom
+- Button text size to be checked against Figma styling
+- Change focus-within to focus-visible
+- Add multiple choice tokens and component
+- Fix dropdowns (incorrect border in component)
+- Fix charts (responsive issues)
